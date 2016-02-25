@@ -1,33 +1,29 @@
-<template name="sync">
+<template name="list">
 	<table class="table">
 		<thead>
 			<tr>
-				<th colspan="3" class="font-xlg">Nearby Devices</th>
+				<th colspan="3" class="font-lg">Shopping List</th>
 			</tr>
 		</thead>
 		<tbody>
-			{{#each devices}}
-				{{ > device}}
+			{{#each ingredients}}
+				{{ > ingredient}}
 			{{/each}}
 		</tbody>
 	</table>
-
-	<div id="next-container" class="hidden">
-		<button type="button" id="next" class="pull-right btn btn-success">Next</button>
-	</div>
-
+	{{ > footer}}
 </template>
 
-<template name="device">
-	<tr class="device" id="{{id}}">
-		<td>
+<template name="ingredient">
+	<tr class="ingredient">
+<!-- 		<td>
 			<div class="img-container">
 				<img src="{{img}}" class="img-responsive img-thumbnail center-block" alt="{{name}}" />
 			</div>
-		</td>
+		</td> -->
 		<td class="vert-align-middle">{{name}}</td>
-		<td class="vert-align-middle">
+<!-- 		<td class="vert-align-middle">
 			<button type="button" class="pull-right btn btn-primary btn-sm">Sync</button>
-		</td>
+		</td> -->
 	</tr>
 </template>

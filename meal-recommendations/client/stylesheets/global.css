@@ -259,7 +259,7 @@
 	font-weight: 100;
 }
 
-.font-regular {
+.font-md {
 	font-size: 15px;
 	font-weight: 100;
 }
@@ -270,6 +270,11 @@
 }
 
 .font-lg {
+	font-size: 20px;
+	font-weight: 100;
+}
+
+.font-xlg {
 	font-size: 25px;
 	font-weight: 100;
 }
