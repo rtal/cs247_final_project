@@ -1,0 +1,206 @@
+{
+  "recipes": [
+    {
+      "name": "Tofu Mushroom Soup",
+      "ingredients": [
+        {
+          "Mushrooms": 0.5,
+          "Vegetable stock": 1,
+          "Tofu": 1,
+          "Shallots": 2,
+          "Soy sauce": 0.5
+        }
+      ]
+    },
+    {
+      "name": "White Bean and Roasted Potato Salad",
+      "ingredients": [
+        {
+          "Great White Northern Beans": 2,
+          "Bay leaves": 2,
+          "Yukon potatoes": 1.5,
+          "Kale": 8
+        }
+      ]
+    },
+    {
+      "name": "Seared Belgian Endive",
+      "ingredients": [
+        {
+          "Belgian Endive": 4,
+          "Extra-virgin olive oil": 1,
+          "Parsley": 2,
+          "Garlic": 1
+        }
+      ]
+    },
+    {
+      "name": "Fennel Rice",
+      "ingredients": [
+        {
+          "Long grain rice": 1,
+          "Fennel": 2,
+          "Parsley": 0.5,
+          "Dill": 0.5,
+          "Butter": 3
+        }
+      ]
+    },
+    {
+      "name": "Spiced Green Beans and Broccoli Tempura",
+      "ingredients": [
+        {
+          "Cornmeal": 2,
+          "Cumin": 0.5,
+          "Dukkah": 0.5,
+          "Green Beans": 2,
+          "Baby Broccoli": 1
+        }
+      ]
+    },
+    {
+      "name": "Greek Bulgur with Brussel Sprouts",
+      "ingredients": [
+        {
+          "Brussel Sprouts": 1,
+          "Onion": 1,
+          "Garlic": 2,
+          "Bulgur": 1,
+          "Lemon": 1
+        }
+      ]
+    },
+    {
+      "name": "Squash and Carrot Soup",
+      "ingredients": [
+        {
+          "Winter squash": 2,
+          "Garlic": 2,
+          "Chicken Stock": 4,
+          "Potato": 1,
+          "Thyme": 2,
+          "Bay leaves": 2
+        }
+      ]
+    },
+    {
+      "name": "Seared and Roasted Brussel Sprouts",
+      "ingredients": [
+        {
+          "Brussel Sprouts": 1.5,
+          "Extra-virgin olive oil": 4,
+          "Red bell pepper": 1,
+          "Garlic": 2,
+          "Lemon": 1,
+          "Mint": 1
+        }
+      ]
+    },
+    {
+      "name": "Toasted Romaine Salad",
+      "ingredients": [
+        {
+          "Romaine lettuce": 2,
+          "Parmesan": 0.5,
+          "Extra-virgin olive oil": 2,
+          "Garlic": 1
+        }
+      ]
+    },
+    {
+      "name": "Israeli Couscous, Bean, and Tomato Salad",
+      "ingredients": [
+        {
+          "Tomatoes": 5,
+          "Garlic": 1,
+          "Extra-virgin olive oil": 2,
+          "Israeli couscous": 2,
+          "Onion": 1,
+          "Basil": 0.5
+        }
+      ]
+    }
+  ],
+  "ingredients_in_possession": [
+    {
+      "name": "Mushrooms",
+      "quantity": 0.5
+    },
+    {
+      "name": "Vegetable stock",
+      "quantity": 1
+    },
+    {
+      "name": "Kale",
+      "quantity": 10
+    },
+    {
+      "name": "Garlic",
+      "quantity": 5
+    },
+    {
+      "name": "Chicken",
+      "quantity": 1
+    },
+    {
+      "name": "Butter",
+      "quantity": 3
+    },
+    {
+      "name": "Ketchup",
+      "quantity": 1
+    },
+    {
+      "name": "Soy sauce",
+      "quantity": 1
+    },
+    {
+      "name": "Kielbasa",
+      "quantity": 1
+    },
+    {
+      "name": "Pinto beans",
+      "quantity": 2
+    },
+    {
+      "name": "Carrots",
+      "quantity": 12
+    },
+    {
+      "name": "Milk",
+      "quantity": 1
+    },
+    {
+      "name": "Half and half",
+      "quantity": 1
+    },
+    {
+      "name": "Seltzer",
+      "quantity": 1
+    },
+    {
+      "name": "Lasagna",
+      "quantity": 3
+    },
+    {
+      "name": "Shakshuka",
+      "quantity": 2
+    },
+    {
+      "name": "Parsley",
+      "quantity": 1
+    },
+    {
+      "name": "Tomatoes",
+      "quantity": 6
+    },
+    {
+      "name": "Dark chocolate",
+      "quantity": 1
+    },
+    {
+      "name": "White wine",
+      "quantity": 1
+    }
+  ]
+}
