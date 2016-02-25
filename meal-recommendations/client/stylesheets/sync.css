@@ -1,0 +1,13 @@
+table {
+	border-bottom: 1px solid #ddd;
+}
+
+table tr {
+	height: 75px;
+}
+
+.device .img-container {
+	position: relative;
+	height: 75px;
+	width: 75px;
+}

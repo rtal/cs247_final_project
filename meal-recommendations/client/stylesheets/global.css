@@ -1,0 +1,346 @@
+.hide {
+	display: none !important;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.float-right {
+	float: right;
+}
+
+.float-left {
+	float: left;
+}
+
+.clear-both {
+	clear: both;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.inline {
+	display: inline;
+}
+
+.vert-align-middle {
+	vertical-align: middle !important;
+}
+
+.no-margin {
+	margin: 0;
+}
+
+.no-margin-bot  {
+	margin-bottom: 0;
+}
+
+.no-margin-top  {
+	margin-top: 0;
+}
+
+.sm-margin {
+	margin: 10px;
+}
+
+.md-margin {
+	margin: 20px;
+}
+
+.lg-margin {
+	margin: 30px;
+}
+
+.xxsm-margin-left {
+	margin-left: 2.5px;
+}
+
+.xsm-margin-left {
+	margin-left: 5px;
+}
+
+.sm-margin-left {
+	margin-left: 10px;
+}
+
+.md-margin-left {
+	margin-left: 20px;
+}
+
+.lg-margin-left {
+	margin-left: 30px;
+}
+
+.xxsm-margin-right {
+	margin-right: 2.5px;
+}
+
+.xsm-margin-right {
+	margin-right: 5px;
+}
+
+.sm-margin-right {
+	margin-right: 10px;
+}
+
+.md-margin-right {
+	margin-right: 20px;
+}
+
+.lg-margin-right {
+	margin-right: 30px;
+}
+
+.xsm-margin-top {
+	margin-top: 5px;
+}
+
+.sm-margin-top {
+	margin-top: 10px;
+}
+
+.md-margin-top {
+	margin-top: 20px;
+}
+
+.lg-margin-top {
+	margin-top: 30px;
+}
+
+.xlg-margin-top {
+	margin-top: 50px;
+}
+
+.xsm-margin-bot {
+	margin-bottom: 5px;
+}
+
+.sm-margin-bot {
+	margin-bottom: 10px;
+}
+
+.md-margin-bot {
+	margin-bottom: 20px;
+}
+
+.lg-margin-bot {
+	margin-bottom: 30px;
+}
+
+.xlg-margin-bot {
+	margin-bottom: 50px;
+}
+
+.no-padding {
+	padding: 0;
+}
+
+.xsm-padding {
+	padding: 5px;
+}
+
+.sm-padding {
+	padding: 10px;
+}
+
+.md-padding {
+	padding: 20px;
+}
+
+.lg-padding {
+	padding: 30px;
+}
+
+.xsm-padding-top {
+	padding-top: 5px;
+}
+
+.sm-padding-top {
+	padding-top: 10px;
+}
+
+.md-padding-top {
+	padding-top: 20px;
+}
+
+.lg-padding-top {
+	padding-top: 30px;
+}
+
+.sm-padding-bot {
+	padding-bottom: 10px;
+}
+
+.md-padding-bot {
+	padding-bottom: 20px;
+}
+
+.lg-padding-bot {
+	padding-bottom: 30px;
+}
+
+.sm-padding-left {
+	padding-left: 10px;
+}
+
+.md-padding-left {
+	padding-left: 20px;
+}
+
+.lg-padding-left {
+	padding-left: 30px;
+}
+
+.sm-padding-right {
+	padding-right: 10px;
+}
+
+.md-padding-right {
+	padding-right: 20px;
+}
+
+.lg-padding-right {
+	padding-right: 30px;
+}
+
+/*.background-color-mint {
+	background-color: #BDFCC9;
+}
+
+.background-color-grey {
+	background-color: #333;
+}
+
+.background-color-grey-opaque {
+	background-color: rgba(51,51,51,0.5);
+}
+
+.background-color-white {
+	background-color: white;
+}
+
+.color-white {
+	color: white;
+}
+
+.color-mint {
+	color: #BDFCC9;
+}
+
+.color-grey {
+	color: #333;
+}
+
+.background {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top:0;
+	left:0;
+	z-index: -1;
+}
+
+.box-shadow {
+	-webkit-box-shadow: 0px 2px 25px 6px rgba(30,30,30,0.8);
+	-moz-box-shadow: 0px 2px 25px 6px rgba(30,30,30,0.8);
+	box-shadow: 0px 2px 25px 6px rgba(30,30,30,0.8);
+}*/
+
+.font-heading {
+	font-size: 40px;
+	font-weight: 100;
+}
+
+.font-subsection {
+	font-size: 30px;
+	font-weight: 100;
+}
+
+.font-regular {
+	font-size: 15px;
+	font-weight: 100;
+}
+
+.font-sm {
+	font-size: 10px;
+	font-weight: 100;
+}
+
+.font-lg {
+	font-size: 25px;
+	font-weight: 100;
+}
+
+/*.icon {
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+form > input[type=text],
+form > textarea {
+	background-color: rgba(51,51,51,0.7);
+	font-size: 16px;
+	border: 1px solid rgba(189, 252, 201, .7);
+	padding: 10px;
+  	line-height: 22px;
+}
+
+input[type=radio] {
+	display: none;
+}
+
+input[type="radio"] + label 
+span {
+	float: left;
+    width: 22px;
+    height: 15px;
+    margin: 2px 2px 0 0;
+    background: url("/img/radio-not-selected.png") left top no-repeat;
+    background-size: 95%;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked + label
+span {
+    background:url("/img/radio-selected.png") left top no-repeat;
+    background-size: 95%;
+}
+
+::-webkit-input-placeholder {
+    color: rgba(189, 252, 201, 1);
+}
+:-moz-placeholder {
+    color: rgba(189, 252, 201, 1);
+}
+::-moz-placeholder {
+    color: rgba(189, 252, 201, 1);
+}
+:-ms-input-placeholder {
+    color: rgba(189, 252, 201, 1);
+}
+
+ul {
+	list-style-type: none;
+}
+
+::-webkit-scrollbar {
+    width: 14px;
+}
+ 
+::-webkit-scrollbar-track {
+	border: 5px solid transparent;
+	background-color: rgba(189, 252, 201, .7);
+	background-clip: content-box;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 13px;
+    border: 3px solid transparent;
+    background-color: #333; 
+    background-clip: content-box;
+}*/
+

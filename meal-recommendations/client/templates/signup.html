@@ -1,0 +1,37 @@
+<template name="signup">
+   <div class="container-fluid">
+      <form id="signup_form" class="md-padding-top">
+
+         <div class="form-group xsm-margin-bot">
+            {{ > fb_signup }}
+         </div>
+
+         <div class="form-group">
+            {{ > google_signup }}
+         </div>
+
+         <div class="form-group-lg">
+            <label class="sr-only" for="username">Email Address</label>
+            <input class="form-control" type="email" id="username" placeholder="Email" />
+         </div>
+
+         <div class="form-group-lg">
+            <label class="sr-only" for="passworkd">Password</label>
+            <input class="form-control input-lg" type="password" id="password" placeholder="Password" />
+         </div>
+
+         <div class="form-group">
+            <button type="submit" class="btn btn-info btn-block btn-lg">Submit</button>
+         </div>
+      </form>
+
+   </div>
+</template>
+
+<template name="fb_signup">
+   <button id="fb_signup" type="button" class="btn btn-primary btn-block btn-lg">Sign up with Facebook</button>
+</template>
+
+<template name="google_signup">
+   <button id="google_signup" type="button" class="btn btn-primary btn-block btn-lg">Sign up with Google+</button>
+</template>

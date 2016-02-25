@@ -1,0 +1,33 @@
+<template name="sync">
+	<table class="table">
+		<thead>
+			<tr>
+				<th colspan="3" class="font-lg">Nearby Devices</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each devices}}
+				{{ > device}}
+			{{/each}}
+		</tbody>
+	</table>
+
+	<div id="next-container" class="hidden">
+		<button type="button" id="next" class="float-right btn btn-success">Next</button>
+	</div>
+
+</template>
+
+<template name="device">
+	<tr class="device" id="{{id}}">
+		<td>
+			<div class="img-container">
+				<img src="{{img}}" class="img-responsive img-thumbnail center-block" alt="{{name}}" />
+			</div>
+		</td>
+		<td class="vert-align-middle">{{name}}</td>
+		<td class="vert-align-middle">
+			<button type="button" class="float-right btn btn-primary btn-sm">Sync</button>
+		</td>
+	</tr>
+</template>

@@ -1,0 +1,21 @@
+#signup_form #fb_signup {
+	background-color: #3B5998;
+	border-color: #3B5998;
+}
+
+#signup_form #fb_signup:hover,
+#signup_form #fb_signup:active {
+	background-color: #3B5198;
+	border-color: #3B5198;
+}
+
+#signup_form #google_signup {
+	background-color: #D34836;
+	border-color: #D34836;
+}
+
+#signup_form #google_signup:hover,
+#signup_form #google_signup:active {
+	background-color: #D35536;
+	border-color: #D35536;
+}
