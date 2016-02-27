@@ -2,6 +2,7 @@
   "recipes": [
     {
       "name": "Tofu Mushroom Soup",
+      "img": "/img/tofu-mushroom-soup.jpg",
       "ingredients": [
         {
           "name": "Mushrooms",
@@ -32,6 +33,7 @@
     },
     {
       "name": "White Bean and Roasted Potato Salad",
+      "img": "/img/bean-potato-salad.jpg",
       "ingredients": [
         {
           "name": "Great White Northern Beans",
@@ -57,6 +59,7 @@
     },
     {
       "name": "Seared Belgian Endive",
+      "img": "/img/seared-belgian-endive.jpg",
       "ingredients": [
         {
           "name": "Belgian Endive",
@@ -82,6 +85,7 @@
     },
     {
       "name": "Fennel Rice",
+      "img": "/img/fennel-rice.jpg",
       "ingredients": [
         {
           "name": "Long Grain Rice",
@@ -112,6 +116,7 @@
     },
     {
       "name": "Spiced Green Beans and Broccoli Tempura",
+      "img": "/img/bean-tempura.jpg",
       "ingredients": [
         {
           "name": "Cornmeal",
@@ -142,6 +147,7 @@
     },
     {
       "name": "Greek Bulgur with Brussel Sprouts",
+      "img": "/img/bulgur-brussel-sprouts.jpg",
       "ingredients": [
         {
           "name": "Brussel Sprouts",
@@ -172,6 +178,7 @@
     },
     {
       "name": "Squash and Carrot Soup",
+      "img": "/img/carrot-squash-soup.jpg",
       "ingredients": [
         {
           "name": "Winter Squash",
@@ -184,9 +191,9 @@
           "img": "/img/garlic.jpg"
         },
         {
-          "name": "Chicken Stock",
+          "name": "Vegetable Stock",
           "quantity": 4,
-          "img": "/img/chicken-stock.jpg"
+          "img": "/img/vegetable-stock.jpg"
         },
         {
           "name": "Potato",
@@ -207,6 +214,7 @@
     },
     {
       "name": "Seared and Roasted Brussel Sprouts",
+      "img": "/img/roasted-brussel-sprouts.jpg",
       "ingredients": [
         {
           "name": "Brussel Sprouts",
@@ -242,6 +250,7 @@
     },
     {
       "name": "Toasted Romaine Salad",
+      "img": "/img/toasted-romaine-salad.jpg",
       "ingredients": [
         {
           "name": "Romaine Lettuce",
@@ -267,6 +276,7 @@
     },
     {
       "name": "Israeli Couscous, Bean, and Tomato Salad",
+      "img": "/img/couscous-salad.jpg",
       "ingredients": [
         {
           "name": "Tomatoes",
