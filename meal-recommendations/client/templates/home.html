@@ -1,0 +1,18 @@
+<template name="home">
+	<div class="fluid-container">
+		<div class="tabbable">
+			<div class="tab-content">
+				<div id="items" class="tab-pane fade in active">
+					{{ > items}}
+				</div>
+				<div id="meals" class="tab-pane fade">
+					{{ > meals}}
+				</div>
+				<div id="list" class="tab-pane fade">
+					{{ > list}}
+				</div>
+			</div>
+			{{ > footer}}
+		</div>
+	</div>
+</template>

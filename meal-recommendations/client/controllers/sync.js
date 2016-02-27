@@ -14,6 +14,6 @@ Template.sync.events({
   },
 
   "click #next": function (event) {
-  	Router.go('items');
+  	Router.go('/');
   }
 });

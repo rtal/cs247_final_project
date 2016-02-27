@@ -1,14 +1,18 @@
 <template name="footer">
-	<div id="footer-space"></div>
-	<div id="footer" class="fluid-container">
-		<div id="items" class="link col-xs-4 text-center">
-			<i class="font-heading ion-ios-list-outline"></i>
+	<div id="footer-space"></div> <!-- this is hacky, figure out a better way -->
+	<nav id="footer" class="no-margin navbar navbar-default navbar-fixed-bottom">
+		<div class="container">
+			<ul class="nav nav-tabs nav-justified items-vert-center">
+				<li role="presentation" class="active link"><a href="#items" data-toggle="tab">
+					<i class="font-heading ion-ios-list-outline"></i>
+				</a></li>
+				<li role="presentation" class="link"><a href="#meals" data-toggle="tab">
+					<i class="font-heading ion-pizza"></i>
+				</a></li>
+				<li role="presentation" class="link"><a href="#list" data-toggle="tab">
+					<i class="font-heading ion-ios-cart-outline"></i>
+				</a></li>
+			</ul>
 		</div>
-		<div id="meals" class="link col-xs-4 text-center">
-			<i class="font-heading ion-pizza"></i>
-		</div>
-		<div id="list" class="link col-xs-4 text-center">
-			<i class="font-heading ion-ios-cart-outline"></i>
-		</div>
-	</div>
+	</nav>
 </template>

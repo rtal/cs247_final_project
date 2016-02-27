@@ -11,19 +11,20 @@
 			{{/each}}
 		</tbody>
 	</table>
-	{{ > footer}}
+<!-- 	{{ > footer}} -->
 </template>
 
 <template name="meal">
 	<tr class="meal">
-<!-- 		<td>
-			<div class="img-container">
-				<img src="{{img}}" class="img-responsive img-thumbnail center-block" alt="{{name}}" />
+		<td>
+			<div class="img-container no-margin">
+				<img src="{{img}}" class="img-responsive img-thumbnail" alt="{{name}}" />
 			</div>
-		</td> -->
+		</td>
 		<td class="vert-align-middle">{{name}}</td>
-<!-- 		<td class="vert-align-middle">
-			<button type="button" class="pull-right btn btn-primary btn-sm">Sync</button>
-		</td> -->
+		<td class="add_meal">
+			<i class="font-xlg ion-ios-plus-outline"></i>
+			<span class="hidden">{{name}}</span>
+		</td>
 	</tr>
 </template>

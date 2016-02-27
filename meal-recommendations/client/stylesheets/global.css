@@ -14,6 +14,10 @@
 	float: left;
 }
 
+.float-none {
+	float: none;
+}
+
 .clear-both {
 	clear: both;
 }
@@ -28,6 +32,15 @@
 
 .vert-align-middle {
 	vertical-align: middle !important;
+}
+
+.items-vert-center {
+	display: flex;
+	align-items: center;
+}
+
+.margin-auto {
+	margin: auto;
 }
 
 .no-margin {
@@ -170,6 +183,10 @@
 	padding-top: 30px;
 }
 
+.xsm-padding-bot {
+	padding-bottom: 5px;
+}
+
 .sm-padding-bot {
 	padding-bottom: 10px;
 }
@@ -277,6 +294,27 @@
 .font-xlg {
 	font-size: 25px;
 	font-weight: 100;
+}
+
+.img-container, .img-container img.img-thumbnail {
+	width: 75px;
+	height: 75px;
+}
+
+table {
+	border-bottom: 1px solid #ddd;
+}
+
+table tr {
+	height: 75px;
+}
+
+table td:not(:first-child){
+    width: 100%;
+}
+
+table td:first-child{
+    white-space: nowrap;
 }
 
 /*.icon {

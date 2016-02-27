@@ -4,11 +4,24 @@
       "name": "Tofu Mushroom Soup",
       "ingredients": [
         {
-          "Mushrooms": 0.5,
-          "Vegetable stock": 1,
-          "Tofu": 1,
-          "Shallots": 2,
-          "Soy sauce": 0.5
+          "name": "Mushrooms",
+          "quantity": 0.5
+        },
+        {
+          "name": "Vegetable stock",
+          "quantity": 1
+        },
+        {
+          "name": "Tofu",
+          "quantity": 1
+        },
+        {
+          "name": "Shallots",
+          "quantity": 2
+        },
+        {
+          "name": "Soy sauce",
+          "quantity": 0.5
         }
       ]
     },
@@ -16,10 +29,20 @@
       "name": "White Bean and Roasted Potato Salad",
       "ingredients": [
         {
-          "Great White Northern Beans": 2,
-          "Bay leaves": 2,
-          "Yukon potatoes": 1.5,
-          "Kale": 8
+          "name": "Great White Northern Beans",
+          "quantity": 2
+        },
+        {
+          "name": "Bay leaves",
+          "quantity": 2
+        },
+        {
+          "name": "Yukon potatoes",
+          "quantity": 1.5
+        },
+        {
+          "name": "Kale",
+          "quantity": 8
         }
       ]
     },
@@ -27,10 +50,20 @@
       "name": "Seared Belgian Endive",
       "ingredients": [
         {
-          "Belgian Endive": 4,
-          "Extra-virgin olive oil": 1,
-          "Parsley": 2,
-          "Garlic": 1
+          "name": "Belgian Endive",
+          "quantity": 4
+        },
+        {
+          "name": "Extra-virgin olive oil",
+          "quantity": 1
+        },
+        {
+          "name": "Parsley",
+          "quantity": 2
+        },
+        {
+          "name": "Garlic",
+          "quantity": 1
         }
       ]
     },
@@ -38,11 +71,24 @@
       "name": "Fennel Rice",
       "ingredients": [
         {
-          "Long grain rice": 1,
-          "Fennel": 2,
-          "Parsley": 0.5,
-          "Dill": 0.5,
-          "Butter": 3
+          "name": "Long grain rice",
+          "quantity": 1
+        },
+        {
+          "name": "Fennel",
+          "quantity": 2
+        },
+        {
+          "name": "Parsley",
+          "quantity": 0.5
+        },
+        {
+          "name": "Dill",
+          "quantity": 0.5
+        },
+        {
+          "name": "Butter",
+          "quantity": 3
         }
       ]
     },
@@ -50,11 +96,24 @@
       "name": "Spiced Green Beans and Broccoli Tempura",
       "ingredients": [
         {
-          "Cornmeal": 2,
-          "Cumin": 0.5,
-          "Dukkah": 0.5,
-          "Green Beans": 2,
-          "Baby Broccoli": 1
+          "name": "Cornmeal",
+          "quantity": 2
+        },
+        {
+          "name": "Cumin",
+          "quantity": 0.5
+        },
+        {
+          "name": "Dukkah",
+          "quantity": 0.5
+        },
+        {
+          "name": "Green Beans",
+          "quantity": 2
+        },
+        {
+          "name": "Baby Broccoli",
+          "quantity": 1
         }
       ]
     },
@@ -62,11 +121,24 @@
       "name": "Greek Bulgur with Brussel Sprouts",
       "ingredients": [
         {
-          "Brussel Sprouts": 1,
-          "Onion": 1,
-          "Garlic": 2,
-          "Bulgur": 1,
-          "Lemon": 1
+          "name": "Brussel Sprouts",
+          "quantity": 1
+        },
+        {
+          "name": "Onion",
+          "quantity": 1
+        },
+        {
+          "name": "Garlic",
+          "quantity": 1
+        },
+        {
+          "name": "Bulgur",
+          "quantity": 1
+        },
+        {
+          "name": "Lemon",
+          "quantity": 1
         }
       ]
     },
@@ -74,12 +146,28 @@
       "name": "Squash and Carrot Soup",
       "ingredients": [
         {
-          "Winter squash": 2,
-          "Garlic": 2,
-          "Chicken Stock": 4,
-          "Potato": 1,
-          "Thyme": 2,
-          "Bay leaves": 2
+          "name": "Winter squash",
+          "quantity": 2
+        },
+        {
+          "name": "Garlic",
+          "quantity": 2
+        },
+        {
+          "name": "Chicken Stock",
+          "quantity": 4
+        },
+        {
+          "name": "Potato",
+          "quantity": 1
+        },
+        {
+          "name": "Thyme",
+          "quantity": 2
+        },
+        {
+          "name": "Bay leaves",
+          "quantity": 2
         }
       ]
     },
@@ -87,12 +175,28 @@
       "name": "Seared and Roasted Brussel Sprouts",
       "ingredients": [
         {
-          "Brussel Sprouts": 1.5,
-          "Extra-virgin olive oil": 4,
-          "Red bell pepper": 1,
-          "Garlic": 2,
-          "Lemon": 1,
-          "Mint": 1
+          "name": "Brussel Sprouts",
+          "quantity": 1.5
+        },
+        {
+          "name": "Extra-virgin olive oil",
+          "quantity": 4
+        },
+        {
+          "name": "Red bell pepper",
+          "quantity": 1
+        },
+        {
+          "name": "Garlic",
+          "quantity": 2
+        },
+        {
+          "name": "Lemon",
+          "quantity": 1
+        },
+        {
+          "name": "Mint",
+          "quantity": 1
         }
       ]
     },
@@ -100,10 +204,20 @@
       "name": "Toasted Romaine Salad",
       "ingredients": [
         {
-          "Romaine lettuce": 2,
-          "Parmesan": 0.5,
-          "Extra-virgin olive oil": 2,
-          "Garlic": 1
+          "name": "Romaine lettuce",
+          "quantity": 2
+        },
+        {
+          "name": "Parmesan",
+          "quantity": 0.5
+        },
+        {
+          "name": "Extra-virgin olive oil",
+          "quantity": 2
+        },
+        {
+          "name": "Garlic",
+          "quantity": 1
         }
       ]
     },
@@ -111,12 +225,28 @@
       "name": "Israeli Couscous, Bean, and Tomato Salad",
       "ingredients": [
         {
-          "Tomatoes": 5,
-          "Garlic": 1,
-          "Extra-virgin olive oil": 2,
-          "Israeli couscous": 2,
-          "Onion": 1,
-          "Basil": 0.5
+          "name": "Tomatoes",
+          "quantity": 5
+        },
+        {
+          "name": "Extra-virgin olive oil",
+          "quantity": 2
+        },
+        {
+          "name": "Garlic",
+          "quantity": 1
+        },
+        {
+          "name": "Israeli Couscous",
+          "quantity": 2
+        },
+        {
+          "name": "Onion",
+          "quantity": 1
+        },
+        {
+          "name": "Basil",
+          "quantity": 0.5
         }
       ]
     }
