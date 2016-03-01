@@ -1,3 +1,15 @@
-td.add_meal:hover {
-	cursor: pointer;
+td.adjust-num-meals:hover {
+	cursor: default;
+}
+
+.meal-heading {
+	width: 100%;
+}
+
+.meal a {
+	text-decoration: none;
+}
+
+.adjust-num-meals .num-servings {
+	text-align: center;
 }

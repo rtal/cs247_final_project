@@ -1,6 +1,7 @@
 {
   "recipes": [
     {
+      "id": "tofu-mushroom-soup",
       "name": "Tofu Mushroom Soup",
       "img": "/img/tofu-mushroom-soup.jpg",
       "ingredients": [
@@ -32,6 +33,7 @@
       ]
     },
     {
+      "id": "white-bean-and-roasted-potato-salad",
       "name": "White Bean and Roasted Potato Salad",
       "img": "/img/bean-potato-salad.jpg",
       "ingredients": [
@@ -58,6 +60,7 @@
       ]
     },
     {
+      "id": "seared-belgian-endive",
       "name": "Seared Belgian Endive",
       "img": "/img/seared-belgian-endive.jpg",
       "ingredients": [
@@ -84,6 +87,7 @@
       ]
     },
     {
+      "id": "fennel-rice",
       "name": "Fennel Rice",
       "img": "/img/fennel-rice.jpg",
       "ingredients": [
@@ -115,6 +119,7 @@
       ]
     },
     {
+      "id": "spiced-green-beans-and-broccoli-tempura",
       "name": "Spiced Green Beans and Broccoli Tempura",
       "img": "/img/bean-tempura.jpg",
       "ingredients": [
@@ -134,11 +139,13 @@
           "img": "/img/dukkah.jpg"
         },
         {
+          "id": "green-beans",
           "name": "Green Beans",
           "quantity": 2,
           "img": "/img/green-beans.jpg"
         },
         {
+          "id": "baby-broccoli",
           "name": "Baby Broccoli",
           "quantity": 1,
           "img": "/img/baby-broccoli.jpg"
@@ -146,30 +153,36 @@
       ]
     },
     {
+      "id": "greek-bulgur-with-brussel-sprouts",
       "name": "Greek Bulgur with Brussel Sprouts",
       "img": "/img/bulgur-brussel-sprouts.jpg",
       "ingredients": [
         {
+          "id": "brussel-sprouts",
           "name": "Brussel Sprouts",
           "quantity": 1,
           "img": "/img/brussel-sprouts.jpg"
         },
         {
+          "id": "onion",
           "name": "Onion",
           "quantity": 1,
           "img": "/img/onion.jpg"
         },
         {
+          "id": "garlic",
           "name": "Garlic",
           "quantity": 1,
           "img": "/img/garlic.jpg"
         },
         {
+          "id": "bulgur",
           "name": "Bulgur",
           "quantity": 1,
           "img": "/img/bulgur.jpg"
         },
         {
+          "id": "lemon",
           "name": "Lemon",
           "quantity": 1,
           "img": "/img/lemon.jpg"
@@ -177,35 +190,42 @@
       ]
     },
     {
+      "id": "squash-and-carrot-soup",
       "name": "Squash and Carrot Soup",
       "img": "/img/carrot-squash-soup.jpg",
       "ingredients": [
         {
+          "id": "winter-squash",
           "name": "Winter Squash",
           "quantity": 2,
           "img": "/img/squash.jpg"
         },
         {
+          "id": "garlic",
           "name": "Garlic",
           "quantity": 2,
           "img": "/img/garlic.jpg"
         },
         {
+          "id": "vegetable-stock",
           "name": "Vegetable Stock",
           "quantity": 4,
           "img": "/img/vegetable-stock.jpg"
         },
         {
+          "id": "potato",
           "name": "Potato",
           "quantity": 1,
           "img": "/img/potato.jpg"
         },
         {
+          "id": "thyme",
           "name": "Thyme",
           "quantity": 2,
           "img": "/img/thyme.jpg"
         },
         {
+          "id": "bay-leaves",
           "name": "Bay Leaves",
           "quantity": 2,
           "img": "/img/bay-leaves.jpg"
@@ -213,35 +233,42 @@
       ]
     },
     {
+      "id": "seared-and-roasted-brussel-sprouts",
       "name": "Seared and Roasted Brussel Sprouts",
       "img": "/img/roasted-brussel-sprouts.jpg",
       "ingredients": [
         {
+          "id": "brussel-sprouts",
           "name": "Brussel Sprouts",
           "quantity": 1.5,
           "img": "/img/brussel-sprouts.jpg"
         },
         {
+          "id": "extra-virgin-olive-oil",
           "name": "Extra-virgin Olive Oil",
           "quantity": 4,
           "img": "/img/olive-oil.jpg"
         },
         {
+          "id": "red-bell-pepper",
           "name": "Red Bell Pepper",
           "quantity": 1,
           "img": "/img/bell-pepper.jpg"
         },
         {
+          "id": "garlic",
           "name": "Garlic",
           "quantity": 2,
           "img": "/img/garlic.jpg"
         },
         {
+          "id": "lemon",
           "name": "Lemon",
           "quantity": 1,
           "img": "/img/lemon.jpg"
         },
         {
+          "id": "mint",
           "name": "Mint",
           "quantity": 1,
           "img": "/img/mint.jpg"
@@ -249,25 +276,30 @@
       ]
     },
     {
+      "id": "toasted-romaine-salad",
       "name": "Toasted Romaine Salad",
       "img": "/img/toasted-romaine-salad.jpg",
       "ingredients": [
         {
+          "id": "romaine-lettuce",
           "name": "Romaine Lettuce",
           "quantity": 2,
           "img": "/img/lettuce.jpg"
         },
         {
+          "id": "parmesan",
           "name": "Parmesan",
           "quantity": 0.5,
           "img": "/img/parmesan.jpg"
         },
         {
+          "id": "extra-virgin-olive-oil",
           "name": "Extra-virgin Olive Oil",
           "quantity": 2,
           "img": "/img/olive-oil.jpg"
         },
         {
+          "id": "garlic",
           "name": "Garlic",
           "quantity": 1,
           "img": "/img/garlic.jpg"
@@ -275,35 +307,42 @@
       ]
     },
     {
+      "id": "israeli-couscous-bean-and-tomato-salad",
       "name": "Israeli Couscous, Bean, and Tomato Salad",
       "img": "/img/couscous-salad.jpg",
       "ingredients": [
         {
+          "id": "tomatoes",
           "name": "Tomatoes",
           "quantity": 5,
           "img": "/img/tomato.jpg"
         },
         {
+          "id": "extra-virgin-olive-oil",
           "name": "Extra-virgin Olive Oil",
           "quantity": 2,
           "img": "/img/olive-oil.jpg"
         },
         {
+          "id": "garlic",
           "name": "Garlic",
           "quantity": 1,
           "img": "/img/garlic.jpg"
         },
         {
+          "id": "israeli-couscous",
           "name": "Israeli Couscous",
           "quantity": 2,
           "img": "/img/couscous.jpg"
         },
         {
+          "id": "onion",
           "name": "Onion",
           "quantity": 1,
           "img": "/img/onion.jpg"
         },
         {
+          "id": "basil",
           "name": "Basil",
           "quantity": 0.5,
           "img": "/img/basil.jpg"
@@ -313,124 +352,178 @@
   ],
   "ingredients_in_possession": [
     {
-      "id": "mushrooms",
-      "name": "Mushrooms",
-      "quantity": 0.5,
-      "img": "/img/mushroom.jpg"
+      "id": "leftovers",
+      "name": "Leftovers",
+      "items": [
+        {
+          "id": "lasanga",
+          "name": "Lasagna",
+          "quantity": 3,
+          "img": "/img/lasagna.jpg"
+        },
+        {
+          "id": "shakshuka",
+          "name": "Shakshuka",
+          "quantity": 2,
+          "img": "/img/shakshuka.jpg"
+        }
+      ]
     },
     {
-      "id": "vegetable-stock",
-      "name": "Vegetable Stock",
-      "quantity": 1,
-      "img": "/img/vegetable-stock.jpg"
+      "id": "vegetables",
+      "name": "Vegetables",
+      "items": [
+        {
+          "id": "mushrooms",
+          "name": "Mushrooms",
+          "quantity": 0.5,
+          "img": "/img/mushroom.jpg"
+        },
+        {
+          "id": "kale",
+          "name": "Kale",
+          "quantity": 10,
+          "img": "/img/kale.jpg"
+        },
+        {
+          "id": "garlic",
+          "name": "Garlic",
+          "quantity": 5,
+          "img": "/img/garlic.jpg"
+        },
+        {
+          "id": "carrots",
+          "name": "Carrots",
+          "quantity": 12,
+          "img": "/img/carrots.jpg"
+        },
+        {
+          "id": "parsley",
+          "name": "Parsley",
+          "quantity": 1,
+          "img": "/img/parsley.jpg"
+        }
+      ]
     },
     {
-      "id": "kale",
-      "name": "Kale",
-      "quantity": 10,
-      "img": "/img/kale.jpg"
+      "id": "fruits",
+      "name": "Fruits",
+      "items":[
+        {
+          "id": "tomatoes",
+          "name": "Tomatoes",
+          "quantity": 6,
+          "img": "/img/tomato.jpg"
+        }
+      ]
     },
     {
-      "id": "garlic",
-      "name": "Garlic",
-      "quantity": 5,
-      "img": "/img/garlic.jpg"
+      "id": "meats",
+      "name": "Meats",
+      "items":[
+        {
+          "id": "chicken",
+          "name": "Chicken",
+          "quantity": 1,
+          "img": "/img/chicken.jpg"
+        },
+        {
+          "id": "kielbasa",
+          "name": "Kielbasa",
+          "quantity": 1,
+          "img": "/img/kielbasa.jpg"
+        }
+      ]
     },
     {
-      "id": "chicken",
-      "name": "Chicken",
-      "quantity": 1,
-      "img": "/img/chicken.jpg"
+      "id": "dairy",
+      "name": "Dairy",
+      "items": [
+        {
+          "id": "butter",
+          "name": "Butter",
+          "quantity": 3,
+          "img": "/img/butter.jpg"
+        },
+        {
+          "id": "milk",
+          "name": "Milk",
+          "quantity": 1,
+          "img": "/img/milk.jpg"
+        },
+        {
+          "id": "half-n-half",
+          "name": "Half and Half",
+          "quantity": 1,
+          "img": "/img/half-half.jpg"
+        }
+      ]
     },
     {
-      "id": "butter",
-      "name": "Butter",
-      "quantity": 3,
-      "img": "/img/butter.jpg"
+      "id": "sweets",
+      "name": "Sweets",
+      "items": [
+        {
+          "id": "dark-chocolate",
+          "name": "Dark Chocolate",
+          "quantity": 1,
+          "img": "/img/dark-chocolate.jpg"
+        }
+      ]
     },
     {
-      "id": "ketchup",
-      "name": "Ketchup",
-      "quantity": 1,
-      "img": "/img/ketchup.jpg"
+      "id": "sauces",
+      "name": "Sauces",
+      "items": [
+        {
+          "id": "ketchup",
+          "name": "Ketchup",
+          "quantity": 1,
+          "img": "/img/ketchup.jpg"
+        },
+        {
+          "id": "soy-sauce",
+          "name": "Soy Sauce",
+          "quantity": 1,
+          "img": "/img/soy-sauce.jpg"
+        }
+      ]
     },
     {
-      "id": "soy-sauce",
-      "name": "Soy Sauce",
-      "quantity": 1,
-      "img": "/img/soy-sauce.jpg"
+      "id": "canned-boxed",
+      "name": "Canned and Boxed Goods",
+      "items": [
+        {
+          "id": "pinto-beans",
+          "name": "Pinto Beans",
+          "quantity": 2,
+          "img": "/img/pinto-beans.jpg"
+        },
+        {
+          "id": "vegetable-stock",
+          "name": "Vegetable Stock",
+          "quantity": 1,
+          "img": "/img/vegetable-stock.jpg"
+        }
+      ]
     },
     {
-      "id": "kielbasa",
-      "name": "Kielbasa",
-      "quantity": 1,
-      "img": "/img/kielbasa.jpg"
-    },
-    {
-      "id": "pinto-beans",
-      "name": "Pinto Beans",
-      "quantity": 2,
-      "img": "/img/pinto-beans.jpg"
-    },
-    {
-      "id": "carrots",
-      "name": "Carrots",
-      "quantity": 12,
-      "img": "/img/carrots.jpg"
-    },
-    {
-      "id": "milk",
-      "name": "Milk",
-      "quantity": 1,
-      "img": "/img/milk.jpg"
-    },
-    {
-      "id": "half-n-half",
-      "name": "Half and Half",
-      "quantity": 1,
-      "img": "/img/half-half.jpg"
-    },
-    {
-      "id": "seltzer",
-      "name": "Seltzer",
-      "quantity": 1,
-      "img": "/img/seltzer.jpg"
-    },
-    {
-      "id": "lasanga",
-      "name": "Lasagna",
-      "quantity": 3,
-      "img": "/img/lasagna.jpg"
-    },
-    {
-      "id": "shakshuka",
-      "name": "Shakshuka",
-      "quantity": 2,
-      "img": "/img/shakshuka.jpg"
-    },
-    {
-      "id": "parsley",
-      "name": "Parsley",
-      "quantity": 1,
-      "img": "/img/parsley.jpg"
-    },
-    {
-      "id": "tomatoes",
-      "name": "Tomatoes",
-      "quantity": 6,
-      "img": "/img/tomato.jpg"
-    },
-    {
-      "id": "dark-chocolate",
-      "name": "Dark Chocolate",
-      "quantity": 1,
-      "img": "/img/dark-chocolate.jpg"
-    },
-    {
-      "id": "white-wine",
-      "name": "White Wine",
-      "quantity": 1,
-      "img": "/img/white-wine.jpg"
+      "id": "beverages",
+      "name": "Beverages",
+      "items":[
+        {
+          "id": "white-wine",
+          "name": "White Wine",
+          "quantity": 1,
+          "img": "/img/white-wine.jpg"
+        },
+        {
+          "id": "seltzer",
+          "name": "Seltzer",
+          "quantity": 1,
+          "img": "/img/seltzer.jpg"
+        }
+      ]
     }
   ]
 }

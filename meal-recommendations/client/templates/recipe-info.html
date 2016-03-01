@@ -1,0 +1,32 @@
+<template name="recipe_info">
+	<div class="container">
+		<div class="ingredients-list">
+			<h5>Ingredients</h5>
+			<table>
+				<tbody>
+					{{#each ingredients}}
+						<tr>
+							<td class="vert-align-middle md-padding-right">
+								<div class="font-regular quantity items-vert-center">
+									<span class="margin-auto">{{quantity}}</span>
+								</div>
+							</td>
+							<td class="vert-align-middle md-padding-right">{{name}}</td>
+							<td class="vert-align-middle">
+								<div class="items-vert-center">
+									<i class="{{#if inPossession name quantity}}ion-android-checkbox-outline{{else}}ion-android-checkbox-outline-blank{{/if}} font-lg"></i>
+								</div>
+							</td>
+						</tr>
+					{{/each}}
+				</tbody>
+			</table>
+		</div>
+		<div class="recipe">
+			<h5>Recipe</h5>
+			<p>
+				This is the recipe with lots of information on how to make this item blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+			</p>
+		</div>
+	</div>
+</template>

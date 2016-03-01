@@ -1,17 +1,18 @@
 <template name="list">
+	<h3>Items Needed</h3>
+	<br>
 	<table class="table">
-		<thead>
+<!-- 		<thead>
 			<tr>
-				<th colspan="3" class="font-lg">Shopping List</th>
+				<th colspan="3" class="font-lg">Items Needed</th>
 			</tr>
-		</thead>
+		</thead> -->
 		<tbody>
 			{{#each ingredients}}
 				{{ > ingredient}}
 			{{/each}}
 		</tbody>
 	</table>
-<!-- 	{{ > footer}} -->
 </template>
 
 <template name="ingredient">
@@ -21,7 +22,12 @@
 				<img src="{{img}}" class="img-responsive img-thumbnail" alt="{{name}}" />
 			</div>
 		</td>
-		<td class="vert-align-middle">{{name}}</td>
+		<td class="vert-align-middle">
+			<div>{{name}}</div>
+			{{#each recipes}}
+				<div class="font-sm xsm-padding-top">{{this}}</div>
+			{{/each}}
+		</td>
 		<td class="vert-align-middle">
 			<div class="font-regular quantity items-vert-center">
 				<span class="margin-auto">{{quantity}}</span>
