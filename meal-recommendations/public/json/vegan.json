@@ -320,7 +320,7 @@
     },
     {
       "id": "vegetable-stock",
-      "name": "Vegetable stock",
+      "name": "Vegetable Stock",
       "quantity": 1,
       "img": "/img/vegetable-stock.jpg"
     },
@@ -356,7 +356,7 @@
     },
     {
       "id": "soy-sauce",
-      "name": "Soy sauce",
+      "name": "Soy Sauce",
       "quantity": 1,
       "img": "/img/soy-sauce.jpg"
     },
@@ -368,7 +368,7 @@
     },
     {
       "id": "pinto-beans",
-      "name": "Pinto beans",
+      "name": "Pinto Beans",
       "quantity": 2,
       "img": "/img/pinto-beans.jpg"
     },
@@ -386,7 +386,7 @@
     },
     {
       "id": "half-n-half",
-      "name": "Half and half",
+      "name": "Half and Half",
       "quantity": 1,
       "img": "/img/half-half.jpg"
     },
@@ -422,13 +422,13 @@
     },
     {
       "id": "dark-chocolate",
-      "name": "Dark chocolate",
+      "name": "Dark Chocolate",
       "quantity": 1,
       "img": "/img/dark-chocolate.jpg"
     },
     {
       "id": "white-wine",
-      "name": "White wine",
+      "name": "White Wine",
       "quantity": 1,
       "img": "/img/white-wine.jpg"
     }

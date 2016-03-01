@@ -23,21 +23,20 @@ function openRecipeFile(filename) {
     return [eval(recipes), eval(ingredientsInPossession)];
 }
 
-function parseData(tempRecipes, tempIngredients) {
+function parseData(recipeArray, ingredientsArray) {
 	// parse recipes
-	for (var i = 0; i < tempRecipes.length; i++) {
-		var currentRecipe = tempRecipes[i];
+	for (var i = 0; i < recipeArray.length; i++) {
+		var currentRecipe = recipeArray[i];
 		recipes[currentRecipe["name"]] = {};
 		var tempIngredients = currentRecipe["ingredients"];
 		for (var j = 0; j < tempIngredients.length; j++) {
 			var currentIngredient = tempIngredients[j];
-			recipes[currentRecipe["name"]][currentIngredient["name"]] = currentIngredient["quantity"];
+			recipes[currentRecipe["name"]][currentIngredient["name"]] = {"quantity": currentIngredient["quantity"], "img": currentIngredient["img"]};
 		}
 	}
-
 	// parse ingredients in possession
-	for (var i = 0; i < tempIngredients.length; i++) {
-		var currentIngredient = tempIngredients[i];
+	for (var i = 0; i < ingredientsArray.length; i++) {
+		var currentIngredient = ingredientsArray[i];
 		ingredientsInPossession[currentIngredient["name"]] = currentIngredient["quantity"]
 	}
 
@@ -46,24 +45,28 @@ function parseData(tempRecipes, tempIngredients) {
 
 function recipeSelected (desiredRecipe, ingredientsNeeded) {
 	for (var ingredient in desiredRecipe) {
-		var quantityNeeded = desiredRecipe[ingredient];
+		var quantityNeeded = desiredRecipe[ingredient]["quantity"];
 		if (ingredient in ingredientsNeeded) {
-			ingredientsNeeded[ingredient] += quantityNeeded;
+			ingredientsNeeded[ingredient]["quantity"] += quantityNeeded;
 		} else {
-			ingredientsNeeded[ingredient] = quantityNeeded;
+			ingredientsNeeded[ingredient] = {};
+			ingredientsNeeded[ingredient]["quantity"] = quantityNeeded;
 		}
+		ingredientsNeeded[ingredient]["img"] = desiredRecipe[ingredient]["img"];
 	}
 }
 
 function finalizeShoppingList (ingredientsInPossession, ingredientsNeeded) {
 	var shoppingList = {};
 	for (var ingredient in ingredientsNeeded) {
-		var difference = ingredientsNeeded[ingredient];
+		var difference = ingredientsNeeded[ingredient]["quantity"];
 		if (ingredient in ingredientsInPossession) {
 			difference -= ingredientsInPossession[ingredient];
 		}
 		if (difference > 0) {
-			shoppingList[ingredient] = difference;
+			shoppingList[ingredient] = {};
+			shoppingList[ingredient]["quantity"] = difference;
+			shoppingList[ingredient]["img"] = ingredientsNeeded[ingredient]["img"];
 		}
 	}
 	return shoppingList;
@@ -71,7 +74,7 @@ function finalizeShoppingList (ingredientsInPossession, ingredientsNeeded) {
 
 function recipeUnselected (unselectedRecipe, ingredientsNeeded) {
 	for (var ingredient in unselectedRecipe) {
-		ingredientsNeeded[ingredient] -= unselectedRecipe[ingredient];
+		ingredientsNeeded[ingredient]["quantity"] -= unselectedRecipe[ingredient];
 	}
 }
 
@@ -122,7 +125,7 @@ Template.meal.events({
 		var shoppingList = finalizeShoppingList(ingredientsInPossession, ingredientsNeeded);
 		var newIngredients = []
 		for (var ingredient in shoppingList) {
-			newIngredients.push({"name": ingredient, "quantity": shoppingList[ingredient]});
+			newIngredients.push({"name": ingredient, "quantity": shoppingList[ingredient]["quantity"], "img": shoppingList[ingredient]["img"]});
 		}
 		Session.set("newIngredients", newIngredients);
 	}
@@ -130,7 +133,6 @@ Template.meal.events({
 
 Template.list.helpers({
 	ingredients: function() {
-		console.log(Session.get("newIngredients"));
 		return Session.get("newIngredients");
 	}
 });
