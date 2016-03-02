@@ -20,11 +20,14 @@
 				{{ > num_servings }}
 			</a>
 		</div>
-		<div id="{{id}}" class="modal hidden" role="dialog" aria-labelledby="{{id}}-label">
+		<div id="{{id}}" class="hide dialog" role="dialog" aria-labelledby="{{id}}-label">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
-					<div class="modal-header">
+					<div class="modal-header display-flex">
 						<h4 class="modal-title" id="{{id}}-label">{{name}}</h4>
+						<div class="modal-close xsm-padding-left xsm-padding-right margin-left-auto">
+							<i class="font-lg pull-right ion-close-round"></i>
+						</div>
 					</div>
 					<div class="modal-body">
 						{{ > recipe_info}}

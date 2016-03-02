@@ -114,10 +114,11 @@ recipes = parsedResults[0];
 ingredientsInPossession = parsedResults[1];
 Session.set("newIngredients", []);
 
+var grid = Math.random() < .5;
+
 Template.home.helpers({
 	showGrid: function() {
-		// return Math.random() < .5;
-		return true;
+		return grid;
 	}
 });
 
@@ -141,7 +142,16 @@ Template.category.events({
 	"click .chevron_toggleable": function(event) {
 		$(event.currentTarget).toggleClass('ion-chevron-down ion-chevron-up');
 	}
-})
+});
+
+Template.item.helpers({
+	quantityCeiling: function(quantity) {
+		return Math.ceil(quantity);
+	},
+	quantityPercentage: function(quantity) {
+		return (quantity / Math.ceil(quantity)) * 100;
+	}
+});
 
 Template.meals.helpers({
 	meals: function() {
@@ -156,12 +166,24 @@ Template.meals_grid.helpers({
 });
 
 Template.meal_grid.events({
-	"click div.meal-grid": function() {
-		console.log(event.currentTarget);
-		var dialog = $(event.currentTarget).next(".modal");
-		console.log(dialog);
-		dialog.removeClass('hidden');
+	"click div.meal-grid": function(event) {
+		var visible_dialog = $(".dialog:not(.hide)");
+		if (visible_dialog.length) {
+			visible_dialog.addClass("hide");
+			$('body').css({ overflow: 'inherit'});
+		} else {
+			var dialog = $(event.currentTarget).next(".dialog");
+			dialog.removeClass("hide");
+			$('body').css({ overflow: 'hidden'});
+		}
+	},
+
+	"click div.modal-dialog .modal-close": function(event) {
+		var dialog = $(event.currentTarget).closest(".dialog:not(.hide)");
+		dialog.addClass('hide');
+		$('body').css({ overflow: 'inherit'});
 	}
+
 });
 
 function resetShoppingList() {
