@@ -6,10 +6,6 @@ td.adjust-num-meals:hover {
 	width: 100%;
 }
 
-.meal a {
-	text-decoration: none;
-}
-
 .adjust-num-meals .num-servings {
 	text-align: center;
 }

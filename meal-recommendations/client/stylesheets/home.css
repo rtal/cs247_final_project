@@ -1,3 +1,18 @@
+#meals a {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+#meals .adjust-num-meals > .add-meal:hover,
+#meals .adjust-num-meals > .remove-meal:hover {
+	cursor: pointer;
+}
+
+#meals .adjust-num-meals > .num-servings:hover {
+	cursor: default;
+}
+
 .ingredient > td > div.quantity {
 	width: 30px;
 	height: 30px;

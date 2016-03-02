@@ -114,6 +114,13 @@ recipes = parsedResults[0];
 ingredientsInPossession = parsedResults[1];
 Session.set("newIngredients", []);
 
+Template.home.helpers({
+	showGrid: function() {
+		// return Math.random() < .5;
+		return true;
+	}
+});
+
 Template.items.helpers({
 	categories: function() {
 		return ingredientsInPossessionList;
@@ -139,6 +146,21 @@ Template.category.events({
 Template.meals.helpers({
 	meals: function() {
 		return recipesList;
+	}
+});
+
+Template.meals_grid.helpers({
+	meals: function() {
+		return recipesList;
+	}
+});
+
+Template.meal_grid.events({
+	"click div.meal-grid": function() {
+		console.log(event.currentTarget);
+		var dialog = $(event.currentTarget).next(".modal");
+		console.log(dialog);
+		dialog.removeClass('hidden');
 	}
 });
 

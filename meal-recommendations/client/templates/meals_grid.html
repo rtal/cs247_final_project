@@ -1,0 +1,47 @@
+<template name="meals_grid">
+	<h3>Recipe Recommendations</h3>
+	<br>
+<!-- 	<div class="panel-group"> -->
+		<div>
+			{{#each meals}}
+				{{ > meal_grid}}
+			{{/each}}
+		</div>
+<!-- 	</div> -->
+</template>
+
+<template name="meal_grid">
+	<div class="xsm-padding-left xsm-padding-right width-half inline-block">
+		<div class="meal-grid well no-padding">
+			<!-- <a data-toggle="modal" data-target="#{{id}}"> -->
+			<a>
+				<br>
+				{{ > meal_grid_heading}}
+				{{ > num_servings }}
+			</a>
+		</div>
+		<div id="{{id}}" class="modal hidden" role="dialog" aria-labelledby="{{id}}-label">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="{{id}}-label">{{name}}</h4>
+					</div>
+					<div class="modal-body">
+						{{ > recipe_info}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="meal_grid_heading">
+	<div class="meal-grid-body">
+		<div>
+            <img src="{{img}}" class="img-responsive center-block" alt="{{name}}" />
+		</div>
+		<div class="title font-md xsm-padding">
+			<span>{{name}}</span>
+		</div>
+	</div>
+</template>

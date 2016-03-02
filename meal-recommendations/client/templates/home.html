@@ -6,7 +6,11 @@
 					{{ > items}}
 				</div>
 				<div id="meals" class="tab-pane fade">
-					{{ > meals}}
+					{{#if showGrid}}
+						{{ > meals_grid}}
+					{{else}}
+						{{ > meals}}
+					{{/if}}
 				</div>
 				<div id="list" class="tab-pane fade">
 					{{ > list}}
