@@ -1,5 +1,5 @@
 <head>
-	<meta name="viewport" content="user-scalable=no, width=device-width, maximum-scale=1, initial-scale=1, minimum-scale=1">
+	<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1">
 </head>
 
 <template name="home">
@@ -7,17 +7,29 @@
 		<div class="tabbable">
 			<div class="tab-content">
 				<div id="items" class="tab-pane fade in active">
-					{{ > items}}
+					<div class="row">
+						<div class="col-xs-12">
+							{{ > items}}
+						</div>
+					</div>
 				</div>
 				<div id="meals" class="tab-pane fade">
-					{{#if showGrid}}
-						{{ > meals_grid}}
-					{{else}}
-						{{ > meals}}
-					{{/if}}
+					<div class="row">
+						<div class="col-xs-12">
+							{{#if showGrid}}
+								{{ > meals_grid}}
+							{{else}}
+								{{ > meals}}
+							{{/if}}
+						</div>
+					</div>
 				</div>
 				<div id="list" class="tab-pane fade">
-					{{ > list}}
+					<div class="row">
+						<div class="col-xs-12">
+							{{ > list}}
+						</div>
+					</div>
 				</div>
 			</div>
 			{{ > footer}}
