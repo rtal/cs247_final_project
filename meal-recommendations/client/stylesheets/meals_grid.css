@@ -9,6 +9,38 @@
 	cursor: pointer;
 }
 
+.not-showing {
+	display: none;
+}
+
+.meal-grid {
+	position: relative;
+}
+
+.meal-grid > .overlay {
+	position: absolute;
+	top:0px;
+	left:0px;
+	height:100%;
+	width:100%;
+	color: white;
+	background-color: rgba(0,0,0,0.5);
+	border:1px solid rgba(0,0,0,0.5);
+	border-radius: inherit;
+}
+
+.meal-grid > a > div > span:first-child {
+	line-height: 16px;
+}
+
+.meal-grid > a > div > span.num-needed {
+	border: 1px solid #d3643b;
+	border-radius: 5px;
+	background-color: #d3643b;
+	color: white;
+	padding: 1px 9px;
+}
+
 .meal-grid .adjust-num-meals {
 	width: 100%;
 	text-align: center;

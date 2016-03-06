@@ -1,10 +1,10 @@
 <template name="recipe_info">
 	<div class="container">
 		<div class="ingredients-list">
-			<h5>Ingredients</h5>
+			<h4>Ingredients</h4>
 			<table>
 				<tbody>
-					{{#each ingredients}}
+					{{#each meal.ingredients}}
 						<tr>
 							<td class="vert-align-middle md-padding-right">
 								<div class="font-regular quantity items-vert-center">
@@ -23,8 +23,8 @@
 			</table>
 		</div>
 		<div class="recipe">
-			<h5>Recipe</h5>
-			{{#each instructions}}
+			<h4>Recipe</h4>
+			{{#each meal.instructions}}
 			<p>
 				{{this}}
 			</p>

@@ -14,16 +14,16 @@ function openRecipeFile(filename) {
 	var ingredientsInPossession = new Array();
 
 	$.ajax({
-        url: filename,
-        async: false,
-        dataType: 'json',
-        success: function(json) {
-        	ingredientsInPossession = json["ingredients_in_possession"]
-        	recipes = json["recipes"]
-        }
-    });
+		url: filename,
+		async: false,
+		dataType: 'json',
+		success: function(json) {
+			ingredientsInPossession = json["ingredients_in_possession"]
+			recipes = json["recipes"]
+		}
+	});
 
-    return [eval(recipes), eval(ingredientsInPossession)];
+	return [eval(recipes), eval(ingredientsInPossession)];
 }
 
 function parseData(recipeArray, ingredientsArray) {
@@ -63,7 +63,6 @@ function recipeSelected (desiredRecipe, ingredientsNeeded) {
 		ingredientsNeeded[ingredient]["recipes"].push(desiredRecipe);
 		ingredientsNeeded[ingredient]["img"] = recipes[desiredRecipe][ingredient]["img"];
 	}
-	console.log(ingredientsNeeded);
 }
 
 function finalizeShoppingList (ingredientsInPossession, ingredientsNeeded) {
@@ -103,7 +102,6 @@ function recipeUnselected (unselectedRecipe, ingredientsNeeded) {
 			recipesWanted.splice(index, 1);
 		}
 	}
-	console.log(ingredientsNeeded);
 }
 
 results = openRecipeFile(menufile);
@@ -113,14 +111,39 @@ parsedResults = parseData(recipesList, ingredientsInPossessionList);
 recipes = parsedResults[0];
 ingredientsInPossession = parsedResults[1];
 Session.set("newIngredients", []);
+Session.set("mealsShowing", []);
 
 var grid = Math.random() < .5;
 
+var numMeals = 3;
+var currNumMeals = 0;
+var offset = 0;
+
 Template.home.helpers({
 	showGrid: function() {
-		return grid;
+		return true;
+		// return grid;
 	}
 });
+
+Template.home.events({
+	"click, touchstart #add-num-meals": function(event) {
+		var input = $(event.currentTarget).siblings("input#num-meals");
+		var curr_num_meals = input.val();
+		input.val(parseInt(curr_num_meals, 10) + 1);
+
+	},
+	"click, touchstart #remove-num-meals": function(event) {
+		var input = $(event.currentTarget).siblings("input#num-meals");
+		var curr_num_meals = input.val();
+		input.val(parseInt(curr_num_meals, 10) - 1);
+	},
+	"click #footer > a": function(event) {
+		var input_value = $(event.currentTarget).parent().siblings("div:not(#footer-space)").find("input#num-meals").val()
+		numMeals = parseInt(input_value, 10);
+		Session.set("mealsShowing", recipesList.slice(offset, offset+numMeals+2));
+	}
+})
 
 Template.items.helpers({
 	categories: function() {
@@ -129,13 +152,13 @@ Template.items.helpers({
 });
 
 // Template.category.helpers({
-// 	isItems: function(type) {
-// 		if (type == "items") {
-// 			return true;
-// 		}
+//  isItems: function(type) {
+//      if (type == "items") {
+//          return true;
+//      }
 
-// 		return false;
-// 	}
+//      return false;
+//  }
 // });
 
 Template.category.events({
@@ -153,38 +176,44 @@ Template.item.helpers({
 	}
 });
 
+Template.meals_list.helpers({
+	meals: function() {
+		return recipesList;
+	}
+});
+
 Template.meals.helpers({
 	meals: function() {
-		return recipesList;
+		return Session.get("mealsShowing");
+		// return recipesList;
+	}
+
+	// hidingRecipe: function(index) {
+	//  if (index+offset >= (numMeals+2)){
+	//      return true;
+	//  }
+	//  return false;
+	// }
+});
+
+Template.meals.events({
+	"click button#regenerate": function(event) {
+		offset += numMeals+2;
+		Session.set('mealsShowing', recipesList.slice(offset, offset+numMeals+2));
 	}
 });
 
-Template.meals_grid.helpers({
-	meals: function() {
-		return recipesList;
-	}
-});
-
-Template.meal_grid.events({
-	"click div.meal-grid": function(event) {
-		var visible_dialog = $(".dialog:not(.hide)");
-		if (visible_dialog.length) {
-			visible_dialog.addClass("hide");
-			$('body').css({ overflow: 'inherit'});
-		} else {
-			var dialog = $(event.currentTarget).next(".dialog");
-			dialog.removeClass("hide");
-			$('body').css({ overflow: 'hidden'});
-		}
-	},
-
-	"click div.modal-dialog .modal-close": function(event) {
-		var dialog = $(event.currentTarget).closest(".dialog:not(.hide)");
-		dialog.addClass('hide');
+function showDialog(jquery_target) {
+	var visible_dialog = $(".dialog:not(.hide)");
+	if (visible_dialog.length) {
+		visible_dialog.addClass("hide");
 		$('body').css({ overflow: 'inherit'});
+	} else {
+		var dialog = jquery_target.next(".dialog");
+		dialog.removeClass("hide");
+		$('body').css({ overflow: 'hidden'});
 	}
-
-});
+}
 
 function resetShoppingList() {
 	var shoppingList = finalizeShoppingList(ingredientsInPossession, ingredientsNeeded);
@@ -199,8 +228,177 @@ function resetShoppingList() {
 	console.log(newIngredients);
 }
 
+function incrementMealCount() {
+	currNumMeals++;
+	if (currNumMeals >= numMeals) {
+		Router.go('/list');
+	}
+}
+
+var DELAY = 400;
+var clicks = 0;
+var timer = null;
+
+// $('div.meal-grid').hammer({
+// 	drag_min_distance:1,
+// 	swipe_velocity:0.1
+// 	prevent_default:true
+// });
+
+Template.meal_grid.helpers({
+
+	meal_grid_gestures:{
+		'tap div.meal-grid': function (event, templateInstance) {
+			clicks++;
+			if(clicks === 1) {
+				timer = setTimeout(function() {
+					showDialog($(event.target).closest('div.meal-grid'));
+					clicks = 0;
+				}, DELAY);
+
+			} else {
+				clearTimeout(timer);
+				clicks = 0;
+			}
+	 	},
+
+		'doubletap div.meal-grid': function (event, templateInstance) {
+			var target = $(event.target).closest('div.meal-grid');
+			var meal_index = (target.attr('id')).split("-")[1];
+			var meal = target.find('div#recipe-name > span').text();
+			recipeSelected(meal, ingredientsNeeded);
+			resetShoppingList();
+			incrementMealCount();
+			target.children("div.overlay").fadeIn(700, function() {
+				$(this).fadeOut(1000, function() {
+					var mealsShowing = Session.get('mealsShowing');
+					mealsShowing.splice(meal_index, 1);
+					mealsShowing.push(recipesList[numMeals+2+offset]);
+					Session.set('mealsShowing', mealsShowing);
+					offset++;
+				});
+			});
+		}
+	},
+
+	numIngredientsNeeded: function(recipeName) {
+		var num = 0;
+		var recipeIngredients = recipes[recipeName];
+		for (var ingredient in recipeIngredients) {
+			ingredientName = ingredient["name"];
+			if (!(ingredient in ingredientsInPossession) || ingredientsInPossession[ingredient] < recipeIngredients[ingredient]["quantity"]) {
+				num++;
+			}
+		}
+		return num;
+	}
+});
+
+Template.meal_grid.events({
+	// "dblclick div.meal-grid": function(event) {
+	//  event.preventDefault();
+	// },
+
+	// meal_grid_Gestures: {
+	//  'tap div.meal-grid': function (event, templateInstance) {
+	//      console.log(this);
+	//      showDialog(event);
+	//  },
+	//  'doubletap div.meal-grid': function (event, templateInstance) {
+	//      var meal_index = ($(event.currentTarget).attr('id')).split("-")[1];
+	//      var meal = $(event.currentTarget).find('div#recipe-name > span').text();
+	//      recipeSelected(meal, ingredientsNeeded);
+	//      resetShoppingList();
+	//      incrementMealCount();
+	//      $(event.currentTarget).children("div.overlay").fadeIn(700, function() {
+	//          $(this).fadeOut(1000, function() {
+	//              var mealsShowing = Session.get('mealsShowing');
+	//              mealsShowing.splice(meal_index, 1);
+	//              mealsShowing.push(recipesList[numMeals+2+offset]);
+	//              Session.set('mealsShowing', mealsShowing);
+	//              offset++;
+	//          });
+	//      });
+	//  }
+	// },
+
+	// "click div.meal-grid": function(event) {
+	// 	// showDialog(event);
+	// 	clicks++;
+	// 	if(clicks === 1) {
+	// 		timer = setTimeout(function() {
+	// 			showDialog($(event.currentTarget));  
+	// 			clicks = 0;
+	// 		}, DELAY);
+
+	// 	} else {
+	// 		clearTimeout(timer);
+	// 		// var meal_index = ($(event.currentTarget).attr('id')).split("-")[1];
+	// 		// var meal = $(event.currentTarget).find('div#recipe-name > span').text();
+	// 		// recipeSelected(meal, ingredientsNeeded);
+	// 		// resetShoppingList();
+	// 		// incrementMealCount();
+	// 		// $(event.currentTarget).children("div.overlay").fadeIn(700, function() {
+	// 		//  $(this).fadeOut(1000, function() {
+	// 		//      var mealsShowing = Session.get('mealsShowing');
+	// 		//      mealsShowing.splice(meal_index, 1);
+	// 		//      mealsShowing.push(recipesList[numMeals+2+offset]);
+	// 		//      Session.set('mealsShowing', mealsShowing);
+	// 		//      offset++;
+	// 		//  });
+	// 		// });
+	// 		clicks = 0;
+	// 	}
+	// },
+
+	// "dblclick div.meal-grid": function(event) {
+	// 	var meal_index = ($(event.currentTarget).attr('id')).split("-")[1];
+	// 	var meal = $(event.currentTarget).find('div#recipe-name > span').text();
+	// 	recipeSelected(meal, ingredientsNeeded);
+	// 	resetShoppingList();
+	// 	incrementMealCount();
+	// 	$(event.currentTarget).children("div.overlay").fadeIn(700, function() {
+	// 		$(this).fadeOut(1000, function() {
+	// 			var mealsShowing = Session.get('mealsShowing');
+	// 			mealsShowing.splice(meal_index, 1);
+	// 			mealsShowing.push(recipesList[numMeals+2+offset]);
+	// 			Session.set('mealsShowing', mealsShowing);
+	// 			offset++;
+	// 		});
+	// 	});
+	// },
+
+	"click div.modal-dialog .modal-close": function(event) {
+		var dialog = $(event.currentTarget).closest(".dialog:not(.hide)");
+		dialog.addClass('hide');
+		$('body').css({ overflow: 'inherit'});
+	},	
+
+	"click div.modal-dialog .add-recipe": function(event) {
+		var dialog = $(event.currentTarget).closest(".dialog:not(.hide)");
+		var meal_div = dialog.siblings('div.meal-grid');
+		var meal_index = (meal_div.attr('id')).split("-")[1];
+		var meal = meal_div.find('div#recipe-name > span').text();
+		recipeSelected(meal, ingredientsNeeded);
+		resetShoppingList();
+		incrementMealCount();
+		dialog.addClass('hide');
+		$('body').css({ overflow: 'inherit'});
+		meal_div.children("div.overlay").fadeIn(700, function() {
+			$(this).fadeOut(1000, function() {
+				var mealsShowing = Session.get('mealsShowing');
+				mealsShowing.splice(meal_index, 1);
+				mealsShowing.push(recipesList[numMeals+2+offset]);
+				Session.set('mealsShowing', mealsShowing);
+				offset++;
+			});
+		});
+	}
+
+});
+
 Template.num_servings.events({
-	"click div.add-meal": function (event) {
+	"click, touchstart div.add-meal": function (event) {
 		var meal = $(event.currentTarget).siblings('span').text();
 		recipeSelected(meal, ingredientsNeeded);
 		resetShoppingList();
@@ -210,7 +408,7 @@ Template.num_servings.events({
 		event.stopPropagation();
 
 	},
-	"click div.remove-meal": function (event) {
+	"click, touchstart div.remove-meal": function (event) {
 		var currServings = $(event.currentTarget).siblings('div.num-servings').children('span');
 		var newNum = parseInt(currServings.text(), 10) - 1;
 		if (newNum < 0) return;

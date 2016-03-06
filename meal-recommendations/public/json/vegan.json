@@ -41,6 +41,42 @@
       ]
     },
     {
+      "id": "fennel-rice",
+      "name": "Fennel Rice",
+      "img": "/img/fennel-rice.jpg",
+      "ingredients": [
+        {
+          "name": "Long Grain Rice",
+          "quantity": 1,
+          "img": "/img/rice.jpg"
+        },
+        {
+          "name": "Fennel",
+          "quantity": 2,
+          "img": "/img/fennel.jpg"
+        },
+        {
+          "name": "Parsley",
+          "quantity": 0.5,
+          "img": "/img/parsley.jpg"
+        },
+        {
+          "name": "Dill",
+          "quantity": 0.5,
+          "img": "/img/dill.jpg"
+        },
+        {
+          "name": "Butter",
+          "quantity": 3,
+          "img": "/img/butter.jpg"
+        }
+      ],
+      "instructions": [
+          "1)  Heat 3 tablespoons olive oil over medium heat in a deep, lidded skillet or a wide, lidded saucepan. Add onion and cook, stirring often, until tender, about 5minutes. Add garlic and stir until fragrant, about 30seconds. Stir in fennel, add a generous pinch of salt, and cook, stirring often, until fennel has wilted and softened, about 8 minutes. Stir in rice or bulgur andstir to coat with olive oil.",
+          "2)  Add water, salt, pepper, parsley and dill and bring to a boil. Reduce heat to low, cover and simmer 20 to 30 minutes, until rice or bulgur is soft and liquid absorbed. Remove from heat, uncover and place a towel across the top of the pan. Return lid and let sit for 10 minutes. Serve hot, with the remaining olive oil drizzled over the top."
+      ]
+    },
+    {
       "id": "white-bean-and-roasted-potato-salad",
       "name": "White Bean and Roasted Potato Salad",
       "img": "/img/bean-potato-salad.jpg",
@@ -105,223 +141,6 @@
           "1)  To make the gremolata, mix together walnuts, parsley, lemon zest, fleur de sel and garlic, if using. Set aside.",
           "2)  Heat olive oil in a medium or large skillet over medium heat. Place endive halves in the skillet, cut side down. They should not be touching one another. Season with kosher salt and pepper and cover pan loosely. Cook until golden brown on the cut side, 5 to 7 minutes. Remove from heat and transfer to a platter or to individual plates, cut side up.",
           "3)  Sprinkle a generous tablespoon of gremolata over each endive half. Drizzle with walnut oil and serve warm."
-      ]
-    },
-    {
-      "id": "fennel-rice",
-      "name": "Fennel Rice",
-      "img": "/img/fennel-rice.jpg",
-      "ingredients": [
-        {
-          "name": "Long Grain Rice",
-          "quantity": 1,
-          "img": "/img/rice.jpg"
-        },
-        {
-          "name": "Fennel",
-          "quantity": 2,
-          "img": "/img/fennel.jpg"
-        },
-        {
-          "name": "Parsley",
-          "quantity": 0.5,
-          "img": "/img/parsley.jpg"
-        },
-        {
-          "name": "Dill",
-          "quantity": 0.5,
-          "img": "/img/dill.jpg"
-        },
-        {
-          "name": "Butter",
-          "quantity": 3,
-          "img": "/img/butter.jpg"
-        }
-      ],
-      "instructions": [
-          "1)  Heat 3 tablespoons olive oil over medium heat in a deep, lidded skillet or a wide, lidded saucepan. Add onion and cook, stirring often, until tender, about 5minutes. Add garlic and stir until fragrant, about 30seconds. Stir in fennel, add a generous pinch of salt, and cook, stirring often, until fennel has wilted and softened, about 8 minutes. Stir in rice or bulgur andstir to coat with olive oil.",
-          "2)  Add water, salt, pepper, parsley and dill and bring to a boil. Reduce heat to low, cover and simmer 20 to 30 minutes, until rice or bulgur is soft and liquid absorbed. Remove from heat, uncover and place a towel across the top of the pan. Return lid and let sit for 10 minutes. Serve hot, with the remaining olive oil drizzled over the top."
-      ]
-    },
-    {
-      "id": "spiced-green-beans-and-broccoli-tempura",
-      "name": "Spiced Green Beans and Broccoli Tempura",
-      "img": "/img/bean-tempura.jpg",
-      "ingredients": [
-        {
-          "name": "Cornmeal",
-          "quantity": 2,
-          "img": "/img/cornmeal.jpg"
-        },
-        {
-          "name": "Cumin",
-          "quantity": 0.5,
-          "img": "/img/cumin.jpg"
-        },
-        {
-          "name": "Dukkah",
-          "quantity": 0.5,
-          "img": "/img/dukkah.jpg"
-        },
-        {
-          "id": "green-beans",
-          "name": "Green Beans",
-          "quantity": 2,
-          "img": "/img/green-beans.jpg"
-        },
-        {
-          "id": "baby-broccoli",
-          "name": "Baby Broccoli",
-          "quantity": 1,
-          "img": "/img/baby-broccoli.jpg"
-        }
-      ],
-      "instructions": [
-          "1)  Make the batter: In a medium bowl, whisk together cornstarch, polenta or cornmeal, whole wheat flour, salt and cumin. Whisk in sparkling water. Stir in cilantro and dukkah.",
-          "2)  Top and tail beans. Cut long stems off broccoli; cut broccoli tops into smaller florets or leave intact.",
-          "3)  Pour oil to a depth of 3 inches into a wok or wid saucepan and heat over medium-high heat to 350 to 375 degrees. Set up a sheet pan with a rack on it next to pan and cover rack with layers of paper towels. Have a deep-fry skimmer handy for removing vegetables from the oil onto the rack.",
-          "4)  Using tongs, dip vegetables into the batter a few at a time, making sure to coat thoroughly. Transfer to hot oil and fry until golden brown, 1 to 2 minutes. Flip over with skimmer to make sure coating is evenly fried. Do not crowd pan. Let oil come back up to temperature between batches.",
-          "5)  Using skimmer, remove vegetables from oil, allowing excess oil to drip back into pan, and drain on towel covered rack. Sprinkle with salt right away if desired. Cool slightly and serve."
-      ]
-    },
-    {
-      "id": "greek-bulgur-with-brussel-sprouts",
-      "name": "Greek Bulgur with Brussel Sprouts",
-      "img": "/img/bulgur-brussel-sprouts.jpg",
-      "ingredients": [
-        {
-          "id": "brussel-sprouts",
-          "name": "Brussel Sprouts",
-          "quantity": 1,
-          "img": "/img/brussel-sprouts.jpg"
-        },
-        {
-          "id": "onion",
-          "name": "Onion",
-          "quantity": 1,
-          "img": "/img/onion.jpg"
-        },
-        {
-          "id": "garlic",
-          "name": "Garlic",
-          "quantity": 1,
-          "img": "/img/garlic.jpg"
-        },
-        {
-          "id": "bulgur",
-          "name": "Bulgur",
-          "quantity": 1,
-          "img": "/img/bulgur.jpg"
-        },
-        {
-          "id": "lemon",
-          "name": "Lemon",
-          "quantity": 1,
-          "img": "/img/lemon.jpg"
-        }
-      ],
-      "instructions": [
-          "1)  Trim brussels sprouts and quarter, or if very small just cut in half.",
-          "2)  Heat 3 tablespoons olive oil over medium heat in deep, lidded skillet or a wide, lidded saucepan. Add onion and cook, stirring often, until tender, about 5 minutes. Add garlic and stir until fragrant, about 30 seconds. Add brussels sprouts and cook, stirring often, until coated with oil and beginning to soften, about 5 minutes. Season to taste with salt and pepper. Add paprika and tomatoes and cook, stirring often, for another 5 minutes, until tomatoes have begun to cook down and soften a bit. Season to taste.",
-          "3)  Add bulgur and stir to coat with the tomato mixture. Add water, more salt to taste, parsley and dill and bring to a boil. Cover, reduce heat to low and simmer 20 to 25 minutes, until water has been absorbed.",
-          "4)  Remove from heat, uncover and quickly stir in lemon juice. Place a towel across the top of the pan. Return lid and let sit for 10 minutes. Serve hot, with the remaining olive oil drizzled over the top."
-      ]
-    },
-    {
-      "id": "squash-and-carrot-soup",
-      "name": "Squash and Carrot Soup",
-      "img": "/img/carrot-squash-soup.jpg",
-      "ingredients": [
-        {
-          "id": "winter-squash",
-          "name": "Winter Squash",
-          "quantity": 2,
-          "img": "/img/squash.jpg"
-        },
-        {
-          "id": "garlic",
-          "name": "Garlic",
-          "quantity": 2,
-          "img": "/img/garlic.jpg"
-        },
-        {
-          "id": "vegetable-stock",
-          "name": "Vegetable Stock",
-          "quantity": 4,
-          "img": "/img/vegetable-stock.jpg"
-        },
-        {
-          "id": "potato",
-          "name": "Potato",
-          "quantity": 1,
-          "img": "/img/potato.jpg"
-        },
-        {
-          "id": "thyme",
-          "name": "Thyme",
-          "quantity": 2,
-          "img": "/img/thyme.jpg"
-        },
-        {
-          "id": "bay-leaves",
-          "name": "Bay Leaves",
-          "quantity": 2,
-          "img": "/img/bay-leaves.jpg"
-        }
-      ],
-      "instructions": [
-          "1)  Cut a square piece of cheesecloth to make a bag for spices, herbs and orange peel. Place allspice berries, cardamom cloves, bay leaves, thyme sprigs and strips of orange zest on cheesecloth. Fold two ends over, then roll up the cheesecloth like a burrito and tie tightly with kitchen string.",
-          "2)  Heat olive oil over medium heat in a large, heavy soup pot or Dutch oven and add onion and carrots. Cook, stirring, until tender, about 5 minutes. Add winter squash and garlic and cook, stirring, until the mixture smells fragrant, about 1 minute. Add water or stock, potato, spice bag, and salt to taste and bring to a boil. Reduce heat, cover and simmer 45 minutes to 1 hour, until squash is very tender. Remove spice bag but first press it against side of the pot to extract liquid.",
-          "3)  Using a hand blender, or in batches in a regular blender, purée the soup. If using a regular blender cover the top of the jar with a towel pulled down tight, rather than airtight with the lid. Return to pot and whisk in the orange juice (or additional stock or water). Taste, adjust seasonings, and heat through.",
-          "4)  Toss quinoa with 1 teaspoon of the pistachio oil. Ladle the soup into bowls and top with some of the quinoa. Drizzle a little more oil over each bowl and serve."
-      ]
-    },
-    {
-      "id": "seared-and-roasted-brussel-sprouts",
-      "name": "Seared and Roasted Brussel Sprouts",
-      "img": "/img/roasted-brussel-sprouts.jpg",
-      "ingredients": [
-        {
-          "id": "brussel-sprouts",
-          "name": "Brussel Sprouts",
-          "quantity": 1.5,
-          "img": "/img/brussel-sprouts.jpg"
-        },
-        {
-          "id": "extra-virgin-olive-oil",
-          "name": "Extra-virgin Olive Oil",
-          "quantity": 4,
-          "img": "/img/olive-oil.jpg"
-        },
-        {
-          "id": "red-bell-pepper",
-          "name": "Red Bell Pepper",
-          "quantity": 1,
-          "img": "/img/bell-pepper.jpg"
-        },
-        {
-          "id": "garlic",
-          "name": "Garlic",
-          "quantity": 2,
-          "img": "/img/garlic.jpg"
-        },
-        {
-          "id": "lemon",
-          "name": "Lemon",
-          "quantity": 1,
-          "img": "/img/lemon.jpg"
-        },
-        {
-          "id": "mint",
-          "name": "Mint",
-          "quantity": 1,
-          "img": "/img/mint.jpg"
-        }
-      ],
-      "instructions": [
-          "1)  Trim brussels sprouts at the base, remove unattached leaves and set them aside. Cut in half and place in a large bowl. Toss with 1 tablespoon olive oil and season with salt.",
-          "2)  Heat oven to 400 degrees. Line a sheet pan with parchment. Heat 2 tablespoons olive oil over medium high heat in a large, heavy skillet (cast iron is ideal). Add as many brussels sprout halves as will fit in a single layer, cut side down, and sear until nicely browned, 3 to 5 minutes. Transfer to baking sheet, cut side down, and repeat with remaining sprouts if you could not fit them all in during the first round. Place baking sheet in oven and roast until sprouts are tender, another 10 minutes.",
-          "3)  Meanwhile, heat remaining oil in pan over medium heat and add red pepper. Cook, stirring often, until tender, about 5 minutes. Add garlic and cook, stirring, until fragrant, 30 seconds to a minute. Add roasted brussels sprouts to pan, stir together and add lemon zest, mint and freshly ground pepper. Heat through, taste and adjust seasonings. Remove from heat and serve."
       ]
     },
     {
@@ -407,6 +226,187 @@
           "2)  Meanwhile, place chopped onion in a small bowl and cover with cold water. Soak 5 minutes, drain and rinse. Drain on paper towels and add to couscous and bean mixture. Add basil, chives, and pepper, and toss together.",
           "3)  Line plates or a platter with lettuce leaves. Top with salad. Sprinkle feta over the top and serve."
       ]
+    },
+    {
+      "id": "greek-bulgur-with-brussel-sprouts",
+      "name": "Greek Bulgur with Brussel Sprouts",
+      "img": "/img/bulgur-brussel-sprouts.jpg",
+      "ingredients": [
+        {
+          "id": "brussel-sprouts",
+          "name": "Brussel Sprouts",
+          "quantity": 1,
+          "img": "/img/brussel-sprouts.jpg"
+        },
+        {
+          "id": "onion",
+          "name": "Onion",
+          "quantity": 1,
+          "img": "/img/onion.jpg"
+        },
+        {
+          "id": "garlic",
+          "name": "Garlic",
+          "quantity": 1,
+          "img": "/img/garlic.jpg"
+        },
+        {
+          "id": "bulgur",
+          "name": "Bulgur",
+          "quantity": 1,
+          "img": "/img/bulgur.jpg"
+        },
+        {
+          "id": "lemon",
+          "name": "Lemon",
+          "quantity": 1,
+          "img": "/img/lemon.jpg"
+        }
+      ],
+      "instructions": [
+          "1)  Trim brussels sprouts and quarter, or if very small just cut in half.",
+          "2)  Heat 3 tablespoons olive oil over medium heat in deep, lidded skillet or a wide, lidded saucepan. Add onion and cook, stirring often, until tender, about 5 minutes. Add garlic and stir until fragrant, about 30 seconds. Add brussels sprouts and cook, stirring often, until coated with oil and beginning to soften, about 5 minutes. Season to taste with salt and pepper. Add paprika and tomatoes and cook, stirring often, for another 5 minutes, until tomatoes have begun to cook down and soften a bit. Season to taste.",
+          "3)  Add bulgur and stir to coat with the tomato mixture. Add water, more salt to taste, parsley and dill and bring to a boil. Cover, reduce heat to low and simmer 20 to 25 minutes, until water has been absorbed.",
+          "4)  Remove from heat, uncover and quickly stir in lemon juice. Place a towel across the top of the pan. Return lid and let sit for 10 minutes. Serve hot, with the remaining olive oil drizzled over the top."
+      ]
+    },
+    {
+      "id": "seared-and-roasted-brussel-sprouts",
+      "name": "Seared and Roasted Brussel Sprouts",
+      "img": "/img/roasted-brussel-sprouts.jpg",
+      "ingredients": [
+        {
+          "id": "brussel-sprouts",
+          "name": "Brussel Sprouts",
+          "quantity": 1.5,
+          "img": "/img/brussel-sprouts.jpg"
+        },
+        {
+          "id": "extra-virgin-olive-oil",
+          "name": "Extra-virgin Olive Oil",
+          "quantity": 4,
+          "img": "/img/olive-oil.jpg"
+        },
+        {
+          "id": "red-bell-pepper",
+          "name": "Red Bell Pepper",
+          "quantity": 1,
+          "img": "/img/bell-pepper.jpg"
+        },
+        {
+          "id": "garlic",
+          "name": "Garlic",
+          "quantity": 2,
+          "img": "/img/garlic.jpg"
+        },
+        {
+          "id": "lemon",
+          "name": "Lemon",
+          "quantity": 1,
+          "img": "/img/lemon.jpg"
+        },
+        {
+          "id": "mint",
+          "name": "Mint",
+          "quantity": 1,
+          "img": "/img/mint.jpg"
+        }
+      ],
+      "instructions": [
+          "1)  Trim brussels sprouts at the base, remove unattached leaves and set them aside. Cut in half and place in a large bowl. Toss with 1 tablespoon olive oil and season with salt.",
+          "2)  Heat oven to 400 degrees. Line a sheet pan with parchment. Heat 2 tablespoons olive oil over medium high heat in a large, heavy skillet (cast iron is ideal). Add as many brussels sprout halves as will fit in a single layer, cut side down, and sear until nicely browned, 3 to 5 minutes. Transfer to baking sheet, cut side down, and repeat with remaining sprouts if you could not fit them all in during the first round. Place baking sheet in oven and roast until sprouts are tender, another 10 minutes.",
+          "3)  Meanwhile, heat remaining oil in pan over medium heat and add red pepper. Cook, stirring often, until tender, about 5 minutes. Add garlic and cook, stirring, until fragrant, 30 seconds to a minute. Add roasted brussels sprouts to pan, stir together and add lemon zest, mint and freshly ground pepper. Heat through, taste and adjust seasonings. Remove from heat and serve."
+      ]
+    },
+    {
+      "id": "squash-and-carrot-soup",
+      "name": "Squash and Carrot Soup",
+      "img": "/img/carrot-squash-soup.jpg",
+      "ingredients": [
+        {
+          "id": "winter-squash",
+          "name": "Winter Squash",
+          "quantity": 2,
+          "img": "/img/squash.jpg"
+        },
+        {
+          "id": "garlic",
+          "name": "Garlic",
+          "quantity": 2,
+          "img": "/img/garlic.jpg"
+        },
+        {
+          "id": "vegetable-stock",
+          "name": "Vegetable Stock",
+          "quantity": 4,
+          "img": "/img/vegetable-stock.jpg"
+        },
+        {
+          "id": "potato",
+          "name": "Potato",
+          "quantity": 1,
+          "img": "/img/potato.jpg"
+        },
+        {
+          "id": "thyme",
+          "name": "Thyme",
+          "quantity": 2,
+          "img": "/img/thyme.jpg"
+        },
+        {
+          "id": "bay-leaves",
+          "name": "Bay Leaves",
+          "quantity": 2,
+          "img": "/img/bay-leaves.jpg"
+        }
+      ],
+      "instructions": [
+          "1)  Cut a square piece of cheesecloth to make a bag for spices, herbs and orange peel. Place allspice berries, cardamom cloves, bay leaves, thyme sprigs and strips of orange zest on cheesecloth. Fold two ends over, then roll up the cheesecloth like a burrito and tie tightly with kitchen string.",
+          "2)  Heat olive oil over medium heat in a large, heavy soup pot or Dutch oven and add onion and carrots. Cook, stirring, until tender, about 5 minutes. Add winter squash and garlic and cook, stirring, until the mixture smells fragrant, about 1 minute. Add water or stock, potato, spice bag, and salt to taste and bring to a boil. Reduce heat, cover and simmer 45 minutes to 1 hour, until squash is very tender. Remove spice bag but first press it against side of the pot to extract liquid.",
+          "3)  Using a hand blender, or in batches in a regular blender, purée the soup. If using a regular blender cover the top of the jar with a towel pulled down tight, rather than airtight with the lid. Return to pot and whisk in the orange juice (or additional stock or water). Taste, adjust seasonings, and heat through.",
+          "4)  Toss quinoa with 1 teaspoon of the pistachio oil. Ladle the soup into bowls and top with some of the quinoa. Drizzle a little more oil over each bowl and serve."
+      ]
+    },
+    {
+      "id": "spiced-green-beans-and-broccoli-tempura",
+      "name": "Spiced Green Beans and Broccoli Tempura",
+      "img": "/img/bean-tempura.jpg",
+      "ingredients": [
+        {
+          "name": "Cornmeal",
+          "quantity": 2,
+          "img": "/img/cornmeal.jpg"
+        },
+        {
+          "name": "Cumin",
+          "quantity": 0.5,
+          "img": "/img/cumin.jpg"
+        },
+        {
+          "name": "Dukkah",
+          "quantity": 0.5,
+          "img": "/img/dukkah.jpg"
+        },
+        {
+          "id": "green-beans",
+          "name": "Green Beans",
+          "quantity": 2,
+          "img": "/img/green-beans.jpg"
+        },
+        {
+          "id": "baby-broccoli",
+          "name": "Baby Broccoli",
+          "quantity": 1,
+          "img": "/img/baby-broccoli.jpg"
+        }
+      ],
+      "instructions": [
+          "1)  Make the batter: In a medium bowl, whisk together cornstarch, polenta or cornmeal, whole wheat flour, salt and cumin. Whisk in sparkling water. Stir in cilantro and dukkah.",
+          "2)  Top and tail beans. Cut long stems off broccoli; cut broccoli tops into smaller florets or leave intact.",
+          "3)  Pour oil to a depth of 3 inches into a wok or wid saucepan and heat over medium-high heat to 350 to 375 degrees. Set up a sheet pan with a rack on it next to pan and cover rack with layers of paper towels. Have a deep-fry skimmer handy for removing vegetables from the oil onto the rack.",
+          "4)  Using tongs, dip vegetables into the batter a few at a time, making sure to coat thoroughly. Transfer to hot oil and fry until golden brown, 1 to 2 minutes. Flip over with skimmer to make sure coating is evenly fried. Do not crowd pan. Let oil come back up to temperature between batches.",
+          "5)  Using skimmer, remove vegetables from oil, allowing excess oil to drip back into pan, and drain on towel covered rack. Sprinkle with salt right away if desired. Cool slightly and serve."
+      ]
     }
   ],
   "ingredients_in_possession": [
@@ -461,6 +461,12 @@
           "name": "Parsley",
           "quantity": 1,
           "img": "/img/parsley.jpg"
+        },
+        {
+          "id": "shallots",
+          "name": "Shallots",
+          "quantity": 2,
+          "img": "/img/shallots.jpg"
         }
       ]
     },
@@ -477,8 +483,8 @@
       ]
     },
     {
-      "id": "meats",
-      "name": "Meats",
+      "id": "meats-and-alternatives",
+      "name": "Meats and Alternatives",
       "items":[
         {
           "id": "chicken",
@@ -491,6 +497,12 @@
           "name": "Kielbasa",
           "quantity": 1,
           "img": "/img/kielbasa.jpg"
+        },
+        {
+          "id": "tofu",
+          "name": "Tofu",
+          "quantity": 1,
+          "img": "/img/tofu.jpg"
         }
       ]
     },

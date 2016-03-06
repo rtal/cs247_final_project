@@ -1,33 +1,50 @@
-<template name="meals_grid">
-	<h3>Recipe Recommendations</h3>
-	<br>
-<!-- 	<div class="panel-group"> -->
-		<div>
-			{{#each meals}}
-				{{ > meal_grid}}
-			{{/each}}
+<template name="meals">
+	<div class="row">
+		<div class="col-xs-12">
+			<h2 class="md-margin-bot">Try These Recipes</h2>
+			<div class="md-margin-bot">
+				{{#each meals}}
+					<div class="xsm-padding-left xsm-padding-right width-half inline-block"> <!-- {{#if hidingRecipe @index}} not-showing {{/if}} -->
+						{{ > meal_grid meal=this index=@index}}
+					</div>
+				{{/each}}
+			</div>
+			<div class="lg-margin-bot">
+				<button type="button" id="regenerate" class="btn btn-primary btn-md center-block">Give Me Different Recipes</button>
+			</div>
 		</div>
-<!-- 	</div> -->
+	</div>
 </template>
 
 <template name="meal_grid">
-	<div class="xsm-padding-left xsm-padding-right width-half inline-block">
-		<div class="meal-grid well no-padding">
-			<!-- <a data-toggle="modal" data-target="#{{id}}"> -->
+<!-- 	<div class="xsm-padding-left xsm-padding-right width-half inline-block pull-left"> -->
+		{{#HammerTouchArea gestureMap=meal_grid_gestures}}
+		<div class="meal-grid well no-padding" id="meal-{{index}}">
 			<a>
+				<div class="items-vert-center">
+					<span class="font-md margin-left-auto text-align-right xxsm-margin-right">Ingredients Needed</span> 
+					<span class="num-needed font-lg xsm-margin">{{numIngredientsNeeded meal.name}}</span>
+				</div>
+				{{ > meal_grid_heading }}
+<!-- 				{{ > num_servings }} -->
 				<br>
-				{{ > meal_grid_heading}}
-				{{ > num_servings }}
 			</a>
+			<div class="overlay items-vert-center" style="display:none;">
+				<span class="margin-auto" style="font-size:70px">
+					<i class="ion-checkmark-round md-padding"></i>
+				</span>
+			</div>
 		</div>
-		<div id="{{id}}" class="hide dialog" role="dialog" aria-labelledby="{{id}}-label">
+		<div id="{{meal.id}}" class="hide dialog" role="dialog" aria-labelledby="{{meal.id}}-label">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
-					<div class="modal-header display-flex">
-						<h4 class="modal-title" id="{{id}}-label">{{name}}</h4>
-						<div class="modal-close xsm-padding-left xsm-padding-right margin-left-auto">
-							<i class="font-lg pull-right ion-close-round"></i>
-						</div>
+					<div class="modal-close pull-right" style="padding: 10px 15px; position:absolute; right:0;">
+						<i class="font-lg ion-close-round"></i>
+					</div>
+					<div style="height:35px;"></div>
+					<div class="modal-header items-vert-center">
+						<h3 class="modal-title md-padding-right" id="{{meal.id}}-label">{{meal.name}}</h3>
+						<button type="button" class="add-recipe margin-left-auto btn btn-success btn-sm" style="font-size: 15px; line-height:19px;">Make This<br>Recipe</button>
 					</div>
 					<div class="modal-body">
 						{{ > recipe_info}}
@@ -35,16 +52,17 @@
 				</div>
 			</div>
 		</div>
-	</div>
+		{{/HammerTouchArea}}
+<!-- 	</div> -->
 </template>
 
 <template name="meal_grid_heading">
 	<div class="meal-grid-body">
 		<div>
-            <img src="{{img}}" class="img-responsive center-block" alt="{{name}}" />
+            <img src="{{meal.img}}" class="img-responsive center-block" alt="{{meal.name}}" />
 		</div>
-		<div class="title font-md xsm-padding">
-			<span>{{name}}</span>
+		<div id="recipe-name" class="title font-lg xsm-padding" style="line-height:27px; letter-spacing:0.75px;">
+			<span>{{meal.name}}</span>
 		</div>
 	</div>
 </template>

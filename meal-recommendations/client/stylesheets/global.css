@@ -46,6 +46,10 @@
 	text-align: center;
 }
 
+.text-align-right {
+	text-align: right;
+}
+
 .vert-align-middle {
 	vertical-align: middle !important;
 }
@@ -75,6 +79,10 @@
 	margin-top: 0;
 }
 
+.xsm-margin {
+	margin: 5px;
+}
+
 .sm-margin {
 	margin: 10px;
 }
@@ -85,6 +93,10 @@
 
 .lg-margin {
 	margin: 30px;
+}
+
+.xlg-margin {
+	margin: 50px;
 }
 
 .xxsm-margin-left {
@@ -309,6 +321,11 @@
 	font-weight: 100;
 }
 
+.font-super-heading {
+	font-size: 50px;
+	font-weight: 100;
+}
+
 .font-subsection {
 	font-size: 30px;
 	font-weight: 100;
@@ -364,6 +381,16 @@ table td:not(:first-child){
 
 table td:first-child{
     white-space: nowrap;
+}
+
+a, a:hover {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+button {
+	color: white;
 }
 
 /*.icon {
