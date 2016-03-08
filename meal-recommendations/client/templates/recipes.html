@@ -1,0 +1,11 @@
+<template name="recipes">
+	<div class="fluid-container">
+		{{ > recipe_header}}
+		<div class="recipe-cards items-vert-center">
+			{{#each recipes}}
+				{{ > recipe_card recipe=this index=@index}}
+			{{/each}}
+		</div>
+		{{ > recipe_footer recipes=recipes}}
+	</div>
+</template>

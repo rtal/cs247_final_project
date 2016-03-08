@@ -1,0 +1,16 @@
+<template name="recipe_footer">
+	{{#HammerTouchArea gestureMap=recipe_footer_gestures}}
+	<nav id="recipe-footer" class="no-margin navbar navbar-default navbar-fixed-bottom" style="display:flex; align-items:flex-end; padding-top:6px;">
+		{{#each recipes}}
+			<div id="recipe-{{@index}}" class="recipe-selector {{#if is_selected @index}} selected {{/if}}" style="margin-left: 1px; margin-right: 1px; width:25%; height:auto;">
+				<img src="{{img}}" class="img-responsive center-block" alt="{{name}}" />
+				<div class="overlay" style="position: absolute; width:100%; height:100%; background-color: rgba(0,0,0,0.3); top:0;">
+					<span class="margin-auto" style="position: relative;">
+						<i class="ion-ios-close-empty"></i>
+					</span>
+				</div>
+			</div>
+		{{/each}}
+	</nav>
+	{{/HammerTouchArea}}
+</template>

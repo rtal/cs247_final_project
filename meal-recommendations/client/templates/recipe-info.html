@@ -4,7 +4,7 @@
 			<h4>Ingredients</h4>
 			<table>
 				<tbody>
-					{{#each meal.ingredients}}
+					{{#each recipe.ingredients}}
 						<tr>
 							<td class="vert-align-middle md-padding-right">
 								<div class="font-regular quantity items-vert-center">
@@ -24,7 +24,7 @@
 		</div>
 		<div class="recipe">
 			<h4>Recipe</h4>
-			{{#each meal.instructions}}
+			{{#each recipe.instructions}}
 			<p>
 				{{this}}
 			</p>

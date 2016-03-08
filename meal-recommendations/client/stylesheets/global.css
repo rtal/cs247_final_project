@@ -1,3 +1,7 @@
+body {
+	padding: 0;
+}
+
 ::-webkit-scrollbar { 
     display: none; 
 }
@@ -318,6 +322,11 @@
 
 .font-heading {
 	font-size: 40px;
+	font-weight: 100;
+}
+
+.font-xsuper-heading {
+	font-size: 60px;
 	font-weight: 100;
 }
 

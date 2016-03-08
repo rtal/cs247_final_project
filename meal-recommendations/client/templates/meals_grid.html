@@ -1,7 +1,7 @@
 <template name="meals">
 	<div class="row">
 		<div class="col-xs-12">
-			<h2 class="md-margin-bot">Try These Recipes</h2>
+			<h2 class="md-margin-bot">Recommended For You</h2>
 			<div class="md-margin-bot">
 				{{#each meals}}
 					<div class="xsm-padding-left xsm-padding-right width-half inline-block"> <!-- {{#if hidingRecipe @index}} not-showing {{/if}} -->
@@ -47,7 +47,7 @@
 						<button type="button" class="add-recipe margin-left-auto btn btn-success btn-sm" style="font-size: 15px; line-height:19px;">Make This<br>Recipe</button>
 					</div>
 					<div class="modal-body">
-						{{ > recipe_info}}
+						{{ > recipe_info recipe=meal}}
 					</div>
 				</div>
 			</div>

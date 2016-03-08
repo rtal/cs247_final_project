@@ -1,0 +1,47 @@
+<template name="recipe_card">
+	{{#HammerTouchArea gestureMap=recipe_card_gestures}}
+		<div class="recipe-card well {{#if is_selected index}} selected {{/if}}" id="{{id}}">
+			<div style="width:100%; height:auto; position:relative;">
+            	<img src="{{recipe.img}}" class="img-responsive center-block" alt="{{recipe.name}}" style="width:100%; height:auto; border-top-left-radius:6px; border-top-right-radius:6px;" />
+            	<div class="recipe-name items-vert-center">
+            		<i class="ion-chevron-left xsm-padding-left md-padding-right font-xlg"></i>
+					<span class="margin-auto">{{recipe.name}}</span>
+				</div>
+				<div class="recipe-choice items-vert-center sm-margin-top font-xsuper-heading">
+					<div class="discard-recipe margin-right-auto" style="border-top-right-radius: 50px; border-bottom-right-radius: 50px; padding:0px 12px 0px 15px;">
+						<i class="ion-ios-close"></i>
+					</div>
+					<div class="add-recipe margin-left-auto" style="border-top-left-radius: 50px; border-bottom-left-radius: 50px; padding:0px 15px 0px 12px;">
+						<i class="ion-ios-checkmark"></i>
+					</div>
+				</div>
+			</div>
+			<div class="info items-vert-center sm-padding">
+        		<div>
+        			<i></i>
+        			<span>Prep Time</span>
+        		</div>
+        		<div class="sm-margin-left sm-margin-right" style="border-right:1px solid black; height:25px;">
+        		</div>
+        		<div>
+        			<i></i>
+        			<span>Serves 5</span>
+        		</div>
+        		<div class="sm-margin-left sm-margin-right" style="border-right:1px solid black; height:25px;">
+        		</div>
+        		<div>
+        		    <i></i>
+        			<span>6 Ingredients</span>
+        		</div>
+            </div>
+			<div class="overlay items-vert-center" style="display:none;">
+				<span class="margin-auto" style="font-size:70px">
+					<i class="ion-checkmark-round md-padding"></i>
+				</span>
+			</div>
+			<div class="recipe-details">
+				{{ > recipe_info}}
+			</div>
+		</div>
+	{{/HammerTouchArea}}
+</template>

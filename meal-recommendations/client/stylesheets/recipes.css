@@ -1,0 +1,132 @@
+.recipe-cards {
+	height: 100%;
+}
+
+.recipe-card {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0px;
+	bottom: 0;
+	margin: auto;
+	width: 250px;
+	height: 300px;
+	border: none;
+	border-radius: 6px;
+	padding: 0;
+	display: none;
+	box-shadow: 0px 14px 68px 6px rgba(0,0,0,0.5);
+}
+
+.recipe-card.selected {
+	display: block;
+	z-index: 1;
+}
+
+.recipe-card.details {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 1040;
+	border-radius: 0px;
+	top: 0px;
+	background-color: #edebe6;
+}
+
+.recipe-card.details .recipe-choice {
+	bottom: 10px;
+	top: auto;
+}
+
+.recipe-card.details .recipe-name {
+	top: 0;
+	bottom: auto;
+	font-size: 20px;
+}
+
+.recipe-card.details .recipe-name > i {
+	display: block;
+}
+
+.recipe-card.details > div:first-child {
+	height: 200px !important;
+	overflow: hidden;
+}
+
+.recipe-card.details > div > img {
+	border-radius: 0px !important;
+	margin-top: -100px;
+}
+
+.recipe-card .recipe-name {
+	position: absolute;
+	bottom: 0;
+	width:100%;
+	color: white;
+/*	padding: 50px 7.5px 10px;*/
+	letter-spacing: 1.25px;
+	font-size: 25px;
+	line-height: 30px;
+/*	background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));*/
+	background-color: rgba(0,0,0,0.6);
+	padding: 10px 7.5px;
+}
+
+.recipe-card .recipe-name > i {
+	display: none;
+}
+
+.recipe-card  > .info {
+/*	position: absolute;
+	bottom: 0;
+	width:100%;
+	color: white;
+	padding: 100px 15px 10px 15px;*/
+/*	border:none; 
+	border-radius:0px;*/
+/*	background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));*/
+}
+
+.recipe-card .recipe-choice {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	color: white;
+}
+
+.recipe-card .recipe-choice > div {
+	background-color: rgba(0,0,0,0.7);
+	height: 65px;
+	position: relative;
+}
+
+.recipe-card .recipe-choice > div > i {
+	position: relative;
+	top: -9.75px;
+}
+
+.recipe-card .recipe-details {
+	display: none;
+}
+
+.recipe-card.details .recipe-details {
+	display: block;
+}
+
+#recipe-footer > div {
+	position: relative;
+	display: none;
+}
+
+#recipe-footer > div.selected {
+/*	top: -3px;*/
+	display: block;
+}
+
+#recipe-footer > div.selected > .overlay {
+	display: none;
+}
+
+#recipe-footer > div.selected.tapped > .overlay {
+	display: block;
+}
