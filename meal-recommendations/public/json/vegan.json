@@ -4,6 +4,7 @@
       "id": "tofu-mushroom-soup",
       "name": "Tofu Mushroom Soup",
       "img": "/img/tofu-mushroom-soup.jpg",
+      "time": 105,
       "ingredients": [
         {
           "name": "Mushrooms",
@@ -44,6 +45,7 @@
       "id": "fennel-rice",
       "name": "Fennel Rice",
       "img": "/img/fennel-rice.jpg",
+      "time": 60,
       "ingredients": [
         {
           "name": "Long Grain Rice",
@@ -80,6 +82,7 @@
       "id": "white-bean-and-roasted-potato-salad",
       "name": "White Bean and Roasted Potato Salad",
       "img": "/img/bean-potato-salad.jpg",
+      "time": 150,
       "ingredients": [
         {
           "name": "Great White Northern Beans",
@@ -115,6 +118,7 @@
       "id": "seared-belgian-endive",
       "name": "Seared Belgian Endive",
       "img": "/img/seared-belgian-endive.jpg",
+      "time": 75,
       "ingredients": [
         {
           "name": "Belgian Endive",
@@ -147,6 +151,7 @@
       "id": "toasted-romaine-salad",
       "name": "Toasted Romaine Salad",
       "img": "/img/toasted-romaine-salad.jpg",
+      "time": 25,
       "ingredients": [
         {
           "id": "romaine-lettuce",
@@ -183,6 +188,7 @@
       "id": "israeli-couscous-bean-and-tomato-salad",
       "name": "Israeli Couscous, Bean, and Tomato Salad",
       "img": "/img/couscous-salad.jpg",
+      "time": 20,
       "ingredients": [
         {
           "id": "tomatoes",
@@ -231,6 +237,7 @@
       "id": "greek-bulgur-with-brussel-sprouts",
       "name": "Greek Bulgur with Brussel Sprouts",
       "img": "/img/bulgur-brussel-sprouts.jpg",
+      "time": 60,
       "ingredients": [
         {
           "id": "brussel-sprouts",
@@ -274,6 +281,7 @@
       "id": "seared-and-roasted-brussel-sprouts",
       "name": "Seared and Roasted Brussel Sprouts",
       "img": "/img/roasted-brussel-sprouts.jpg",
+      "time": 25,
       "ingredients": [
         {
           "id": "brussel-sprouts",
@@ -322,6 +330,7 @@
       "id": "squash-and-carrot-soup",
       "name": "Squash and Carrot Soup",
       "img": "/img/carrot-squash-soup.jpg",
+      "time": 75,
       "ingredients": [
         {
           "id": "winter-squash",
@@ -371,6 +380,7 @@
       "id": "spiced-green-beans-and-broccoli-tempura",
       "name": "Spiced Green Beans and Broccoli Tempura",
       "img": "/img/bean-tempura.jpg",
+      "time": 30,
       "ingredients": [
         {
           "name": "Cornmeal",
