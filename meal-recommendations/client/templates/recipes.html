@@ -1,11 +1,30 @@
+<head>
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+
 <template name="recipes">
+	{{#HammerTouchArea gestureMap=recipes_gestures}}
 	<div class="fluid-container">
-		{{ > recipe_header}}
-		<div class="recipe-cards items-vert-center">
-			{{#each recipes}}
-				{{ > recipe_card recipe=this index=@index}}
-			{{/each}}
+		<div class="row">
+			<div class="col-xs-12">
+<!-- 				{{ > recipe_header}} -->
+				<div class="recipe-cards items-vert-center">
+					{{#each recipes}}
+						{{ > recipe_card recipe=this index=@index}}
+					{{/each}}
+				</div>
+				<div class="scroll items-vert-center md-padding-top" style="width:100%; font-size:45px;">
+					<div class="scroll-left margin-left-auto">
+						<i class="ion-chevron-left"></i>
+					</div>
+					<div class="lg-padding-left lg-padding-right"></div>
+					<div class="scroll-right margin-right-auto">
+						<i class="ion-chevron-right"></i>
+					</div>
+				</div>
+				{{ > recipe_footer recipes=recipes}}
+			</div>
 		</div>
-		{{ > recipe_footer recipes=recipes}}
 	</div>
+	{{/HammerTouchArea}}
 </template>

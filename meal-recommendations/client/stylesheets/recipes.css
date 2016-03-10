@@ -1,30 +1,55 @@
 .recipe-cards {
+	position: relative;
+	padding-top: 30px;
 	height: 100%;
+	min-height: 330px;
+/*	padding-left: 90px;*/
 }
 
 .recipe-card {
-	position: absolute;
-	left: 0;
+/*	position: absolute;*/
+/*	left: 0;
 	right: 0;
-	top: 0px;
-	bottom: 0;
-	margin: auto;
-	width: 250px;
-	height: 300px;
+	top: 0;
+	bottom: 0;*/
+/*	margin: auto;*/
+	position: relative;
+	z-index: 1;
+	margin: 0;
+	width: 200px;
+	height: 250px;
 	border: none;
 	border-radius: 6px;
 	padding: 0;
-	display: none;
+/*	display: none;*/
 	box-shadow: 0px 14px 68px 6px rgba(0,0,0,0.5);
+	overflow: hidden;
+	transition: width 0.75s,
+				height 0.75s,
+				left 0.75s,
+				right 0.75s,
+				top 0.75s,
+				bottom 0.75s,
+				padding 0.75s,
+				position 0.75s,
+				margin 0.75s,
+				overflow 0.75s,
+				z-index 0.75s,
+				background-color 0.75s ease-in;
 }
 
 .recipe-card.selected {
+/*	width: 250px;
+	height: 300px;*/
 	display: block;
-	z-index: 1;
+/*	margin: 0 -50px;*/
+	z-index: 1000;
 }
 
 .recipe-card.details {
-	position: relative;
+	position: absolute;
+	margin:0;
+	overflow: auto;
 	width: 100%;
 	height: 100%;
 	z-index: 1040;
@@ -61,6 +86,7 @@
 .recipe-card .recipe-name {
 	position: absolute;
 	bottom: 0;
+	left:0;
 	width:100%;
 	color: white;
 /*	padding: 50px 7.5px 10px;*/
@@ -70,6 +96,10 @@
 /*	background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));*/
 	background-color: rgba(0,0,0,0.6);
 	padding: 10px 7.5px;
+
+	transition: top 0.75s,
+				left 0.75s,
+				bottom 0.75s;
 }
 
 .recipe-card .recipe-name > i {
@@ -92,6 +122,10 @@
 	top: 0;
 	width: 100%;
 	color: white;
+
+	transition: top 0.75s,
+				bottom 0.75s;
+
 }
 
 .recipe-card .recipe-choice > div {
@@ -113,13 +147,48 @@
 	display: block;
 }
 
-#recipe-footer > div {
+.recipe-card .overlay {
+	display: none;
+}
+
+.recipe-card.thumbnail {
+/*	margin: 0;*/
+/*	width: 20%;*/
+	max-height: 95px;
+	max-width: 95px;
+/*	height: auto;
+	bottom: 0;
+	top: auto;
+	left: auto;
+	right: auto;
+	z-index: 1040;
+	border-radius: 0px;*/
+	top: 5px;
+	height: auto;
+	display: inline-block;
+	position: relative;
+}
+
+.recipe-card.thumbnail > div:not(:first-child),
+.recipe-card.thumbnail > div > div {
+	display: none;
+}
+
+.recipe-card.thumbnail.tapped {
+	top: 0px;
+}
+
+.recipe-card.thumbnail.tapped .overlay {
+	display: flex;
+}
+
+/*#recipe-footer > div {
 	position: relative;
 	display: none;
 }
 
 #recipe-footer > div.selected {
-/*	top: -3px;*/
+	top: -3px;
 	display: block;
 }
 
@@ -129,4 +198,4 @@
 
 #recipe-footer > div.selected.tapped > .overlay {
 	display: block;
-}
+}*/

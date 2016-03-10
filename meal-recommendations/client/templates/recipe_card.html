@@ -16,27 +16,26 @@
 					</div>
 				</div>
 			</div>
-			<div class="info items-vert-center sm-padding">
+			<div class="info items-vert-center sm-padding font-md">
         		<div>
         			<i></i>
-        			<span>Prep Time</span>
-        		</div>
-        		<div class="sm-margin-left sm-margin-right" style="border-right:1px solid black; height:25px;">
-        		</div>
-        		<div>
-        			<i></i>
-        			<span>Serves 5</span>
+        			<span>{{recipe.time}} min</span>
         		</div>
         		<div class="sm-margin-left sm-margin-right" style="border-right:1px solid black; height:25px;">
         		</div>
         		<div>
         		    <i></i>
-        			<span>6 Ingredients</span>
+        			<span style="line-height: 20px;">{{numIngredientsNeeded}} Ingredients<br>Needed</span>
         		</div>
             </div>
-			<div class="overlay items-vert-center" style="display:none;">
+<!-- 			<div class="overlay items-vert-center" style="display:none;">
 				<span class="margin-auto" style="font-size:70px">
 					<i class="ion-checkmark-round md-padding"></i>
+				</span>
+			</div> -->
+			<div class="overlay items-vert-center" style="position: absolute; width:100%; height:100%; background-color: rgba(0,0,0,0.5); top:0;">
+				<span class="margin-auto items-vert-center" style="position: relative; color: white; font-size: 100px; height:100%;">
+					<i class="ion-ios-close-empty"></i>
 				</span>
 			</div>
 			<div class="recipe-details">
