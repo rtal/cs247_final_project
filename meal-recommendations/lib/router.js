@@ -7,5 +7,5 @@ Router.route('/home');
 Router.route('/recipes');
 
 Router.route('/', function() {
-	this.render('/home');
+	this.render('/recipes');
 });
