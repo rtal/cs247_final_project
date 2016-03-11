@@ -1,6 +1,51 @@
 {
   "recipes": [
     {
+      "id": "lasagna-bread",
+      "name": "Leftover Lasagna Bread",
+      "img": "/img/lasagna-bread.jpg",
+      "time": 45,
+      "ingredients": [
+        {
+          "name": "Bread Dough",
+          "quantity": 0.5,
+          "unit": "pound",
+          "img": "/img/dough.jpg"
+        },
+        {
+          "name": "Mozzarella Cheese",
+          "quantity": 3,
+          "unit": "tablespoons",
+          "img": "/img/mozzarella.jpg"
+        },
+        {
+          "name": "Pasta Sauce",
+          "quantity": 1,
+          "unit": "bottle",
+          "img": "/img/pasta-sauce.jpg"
+        },
+        {
+          "name": "Lasagna",
+          "quantity": 2,
+          "unit": "servings",
+          "img": "/img/lasagna.jpg"
+        },
+        {
+          "name": "Egg White",
+          "quantity": 3,
+          "unit": "eggs",
+          "img": "/img/egg-white.jpg"
+        }
+      ],
+      "instructions": [
+          "1) Roll out the dough until it's flat. Then use a knife to cut slits on the side of the dough",
+          "2) Put leftover lasagna in the middle of the dough.",
+          "3) Put pasta sauce and cheese on top of the lasagna.",
+          "4) Braid up the dough strips over the lasagna until it looks like a nice roll. Glaze the top with egg whites.",
+          "5) Bake at 400 degrees for 30 minutes."
+      ]
+    },
+    {
       "id": "tofu-mushroom-soup",
       "name": "Tofu Mushroom Soup",
       "img": "/img/tofu-mushroom-soup.jpg",
@@ -475,7 +520,7 @@
       "name": "Leftovers",
       "items": [
         {
-          "id": "lasanga",
+          "id": "lasagna",
           "name": "Lasagna",
           "quantity": 3,
           "unit": "servings",
