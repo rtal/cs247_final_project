@@ -396,7 +396,7 @@ table td:first-child{
     white-space: nowrap;
 }
 
-a, a:hover {
+a, a:hover, a:focus {
 	text-decoration: none;
 	color: inherit;
 	cursor: pointer;

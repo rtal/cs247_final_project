@@ -26,7 +26,8 @@
 .ingredient > td > div.quantity {
 	width: 30px;
 	height: 30px;
-	border: 1px solid #D6E1C7;
+	border: 1px solid #d1e1eb;
 	border-radius: 5px;
-	background-color: #D6E1C7;
+	background-color: #d1e1eb;
+	color: #3e454c;
 }

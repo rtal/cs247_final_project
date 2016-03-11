@@ -1,5 +1,5 @@
 <template name="list">
-	<div class="row">
+<!-- 	<div class="row"> -->
 		<div class="col-xs-12">
 			<h2 class="md-margin-bot text-align-center">Your Shopping List</h2>
 			<table class="table">
@@ -15,7 +15,7 @@
 				</tbody>
 			</table>
 		</div>
-	</div>
+<!-- 	</div> -->
 </template>
 
 <template name="ingredient">
@@ -26,13 +26,13 @@
 			</div>
 		</td>
 		<td class="vert-align-middle">
-			<div>{{name}}</div>
+			<div class="font-md-bolder">{{name}}</div>
 			{{#each recipes}}
-				<div class="font-sm font-italic xsm-padding-top">{{this}}</div>
+				<div class="font-sm font-italic xsm-padding-top" style="letter-spacing:1.25px;">{{this}}</div>
 			{{/each}}
 		</td>
 		<td class="vert-align-middle">
-			<div class="font-regular quantity items-vert-center">
+			<div class="font-md-bolder quantity items-vert-center">
 				<span class="margin-auto">{{quantity}}</span>
 			</div>
 		</td>

@@ -8,18 +8,35 @@
 		<div class="row">
 			<div class="col-xs-12">
 <!-- 				{{ > recipe_header}} -->
-				<div class="recipe-cards items-vert-center">
-					{{#each recipes}}
-						{{ > recipe_card recipe=this index=@index}}
-					{{/each}}
-				</div>
-				<div class="scroll items-vert-center md-padding-top" style="width:100%; font-size:45px;">
-					<div class="scroll-left margin-left-auto">
-						<i class="ion-chevron-left"></i>
+				<div class="row">
+					<div class="col-xs-8" style="float:right;">
+						<div id="serving-size" class="input-group input-group-lg sm-padding">
+							<span class="input-group-addon">Serving Size:</span>
+							<input type="number" class="form-control" value="{{servingSize}}" style="padding:10px;">
+						</div>
 					</div>
-					<div class="lg-padding-left lg-padding-right"></div>
-					<div class="scroll-right margin-right-auto">
-						<i class="ion-chevron-right"></i>
+				</div>
+
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="recipe-cards items-vert-center">
+							{{#each recipes}}
+								{{ > recipe_card recipe=this index=@index}}
+							{{/each}}
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="scroll items-vert-center md-padding-top" style="width:100%; font-size:45px;">
+							<div class="scroll-left margin-left-auto">
+								<i class="ion-chevron-left"></i>
+							</div>
+							<div class="lg-padding-left lg-padding-right"></div>
+							<div class="scroll-right margin-right-auto">
+								<i class="ion-chevron-right"></i>
+							</div>
+						</div>
 					</div>
 				</div>
 				{{ > recipe_footer recipes=recipes}}

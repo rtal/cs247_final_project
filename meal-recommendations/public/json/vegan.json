@@ -8,13 +8,13 @@
       "ingredients": [
         {
           "name": "Mushrooms",
-          "quantity": 6,
+          "quantity": 1,
           "unit": "mushrooms",
           "img": "/img/mushroom.jpg"
         },
         {
           "name": "Vegetable Stock",
-          "quantity": 6,
+          "quantity": 2,
           "unit": "cups",
           "img": "/img/vegetable-stock.jpg"
         },
@@ -497,7 +497,7 @@
         {
           "id": "mushrooms",
           "name": "Mushrooms",
-          "quantity": 0.5,
+          "quantity": 1.5,
           "unit": "mushrooms",
           "img": "/img/mushroom.jpg"
         },
@@ -505,7 +505,7 @@
           "id": "kale",
           "name": "Kale",
           "quantity": 10,
-          "unit": "bunch",
+          "unit": "bunches",
           "img": "/img/kale.jpg"
         },
         {
@@ -526,7 +526,7 @@
           "id": "parsley",
           "name": "Parsley",
           "quantity": 1,
-          "unit": "bunch",
+          "unit": "bunches",
           "img": "/img/parsley.jpg"
         },
         {
@@ -559,21 +559,21 @@
           "id": "chicken",
           "name": "Chicken",
           "quantity": 1,
-          "unit": "pound",
+          "unit": "pounds",
           "img": "/img/chicken.jpg"
         },
         {
           "id": "kielbasa",
           "name": "Kielbasa",
           "quantity": 1,
-          "unit": "pound",
+          "unit": "pounds",
           "img": "/img/kielbasa.jpg"
         },
         {
           "id": "tofu",
           "name": "Tofu",
-          "quantity": 1,
-          "unit": "package",
+          "quantity": 1.5,
+          "unit": "packages",
           "img": "/img/tofu.jpg"
         }
       ]
@@ -586,21 +586,21 @@
           "id": "butter",
           "name": "Butter",
           "quantity": 3,
-          "unit": "stick",
+          "unit": "sticks",
           "img": "/img/butter.jpg"
         },
         {
           "id": "milk",
           "name": "Milk",
-          "quantity": 1,
-          "unit": "gallon",
+          "quantity": 0.15,
+          "unit": "gallons",
           "img": "/img/milk.jpg"
         },
         {
           "id": "half-n-half",
           "name": "Half and Half",
-          "quantity": 1,
-          "unit": "pint",
+          "quantity": 0.95,
+          "unit": "pints",
           "img": "/img/half-half.jpg"
         }
       ]
@@ -613,7 +613,7 @@
           "id": "dark-chocolate",
           "name": "Dark Chocolate",
           "quantity": 1,
-          "unit": "bar",
+          "unit": "bars",
           "img": "/img/dark-chocolate.jpg"
         }
       ]
@@ -625,15 +625,15 @@
         {
           "id": "ketchup",
           "name": "Ketchup",
-          "quantity": 1,
-          "unit": "bottle",
+          "quantity": 0.75,
+          "unit": "bottles",
           "img": "/img/ketchup.jpg"
         },
         {
           "id": "soy-sauce",
           "name": "Soy Sauce",
-          "quantity": 1,
-          "unit": "bottle",
+          "quantity": 0.5,
+          "unit": "bottles",
           "img": "/img/soy-sauce.jpg"
         }
       ]
@@ -652,8 +652,8 @@
         {
           "id": "vegetable-stock",
           "name": "Vegetable Stock",
-          "quantity": 1,
-          "unit": "carton",
+          "quantity": 2.5,
+          "unit": "cartons",
           "img": "/img/vegetable-stock.jpg"
         }
       ]
@@ -665,15 +665,15 @@
         {
           "id": "white-wine",
           "name": "White Wine",
-          "quantity": 1,
-          "unit": "bottle",
+          "quantity": 0.75,
+          "unit": "bottles",
           "img": "/img/white-wine.jpg"
         },
         {
           "id": "seltzer",
           "name": "Seltzer",
-          "quantity": 1,
-          "unit": "bottle",
+          "quantity": 0.6,
+          "unit": "bottles",
           "img": "/img/seltzer.jpg"
         }
       ]

@@ -2,9 +2,12 @@
 	position: relative;
 	width: 100%;
 	height: 85px;
+
 }
 #footer {
 	min-height: 0px;
+	background-color: #3e454c;
+	border-color: #fff6e5;
 }
 #footer > .container > ul {
 	display: table;

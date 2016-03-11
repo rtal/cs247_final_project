@@ -1,8 +1,8 @@
 Template.sync.helpers({
 	devices: function() {
-		return new Array({id: "device1", name: "Device 1", img: "/img/device1.jpg"}, 
-					     {id: "device2", name: "Device 2", img: "/img/device2.jpg"}, 
-					     {id: "device3", name: "Device 3", img: "/img/device3.jpeg"});
+		return new Array({id: "device1", name: "Pantry Camera", img: "/img/device1.jpg"}, 
+					     {id: "device2", name: "Refridgerator Camera", img: "/img/device2.jpg"}, 
+					     {id: "device3", name: "Counter-Top Camera", img: "/img/device3.jpeg"});
 	}
 });
 

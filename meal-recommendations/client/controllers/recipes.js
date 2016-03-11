@@ -49,8 +49,9 @@ function parseData(recipeArray, ingredientsArray) {
 }
 
 function recipeSelected (desiredRecipe, ingredientsNeeded) {
+	var serving_size = Session.get("serving_size");
 	for (var ingredient in recipes[desiredRecipe]) {
-		var quantityNeeded = recipes[desiredRecipe][ingredient]["quantity"];
+		var quantityNeeded = recipes[desiredRecipe][ingredient]["quantity"]*serving_size;
 		if (ingredient in ingredientsNeeded) {
 			ingredientsNeeded[ingredient]["quantity"] += quantityNeeded;
 		} else {
@@ -73,7 +74,7 @@ function finalizeShoppingList (ingredientsInPossession, ingredientsNeeded) {
 		if (difference > 0) {
 			shoppingList[ingredient] = {};
 			shoppingList[ingredient]["recipes"] = [];
-			shoppingList[ingredient]["quantity"] = difference;
+			shoppingList[ingredient]["quantity"] = Math.ceil(difference);
 			shoppingList[ingredient]["img"] = ingredientsNeeded[ingredient]["img"];
 			var associatedRecipes = ingredientsNeeded[ingredient]["recipes"]
 			for (var i = 0; i < associatedRecipes.length; i++) {
@@ -88,9 +89,9 @@ function finalizeShoppingList (ingredientsInPossession, ingredientsNeeded) {
 }
 
 function recipeUnselected (unselectedRecipe, ingredientsNeeded) {
-	console.log(unselectedRecipe);
+	var serving_size = Session.get("serving_size");
 	for (var ingredient in recipes[unselectedRecipe]) {
-		ingredientsNeeded[ingredient]["quantity"] -= recipes[unselectedRecipe][ingredient]["quantity"];
+		ingredientsNeeded[ingredient]["quantity"] -= recipes[unselectedRecipe][ingredient]["quantity"]*serving_size;
 		if (ingredientsNeeded[ingredient]["quantity"] < 0) {
 			ingredientsNeeded[ingredient]["quantity"] = 0;
 		}
@@ -112,7 +113,6 @@ function resetShoppingList() {
 							 "recipes": shoppingList[ingredient]["recipes"]});
 	}
 	Session.set("newIngredients", newIngredients);
-	console.log(newIngredients);
 }
 
 results = openRecipeFile(menufile);
@@ -124,8 +124,7 @@ ingredientsInPossession = parsedResults[1];
 Session.set("newIngredients", []);
 Session.set("mealsShowing", []);
 
-num_recipes = 5;
-// selected_index = 0;
+Session.set("serving_size", 1);
 Session.set("selected_index", 0);
 Session.set("num_selected", 0);
 Session.set("recipes_showing", recipesList);
@@ -141,8 +140,6 @@ window_width = $(window).width();
 //window_width = window.orientation == 0 ? window.screen.width: window.screen.height;
 
 Template.recipes.rendered = function() {
-	// var window_width = $(window).width();
-	// var window_width = window.orientation == 0 ? window.screen.width: window.screen.height;
 
 	selected_recipe_card_width = window_width * 0.75;
 	selected_recipe_card_height = selected_recipe_card_width + 50;
@@ -345,6 +342,10 @@ Template.recipes.helpers({
 
 	recipes: function() {
 		return Session.get("recipes_showing");
+	},
+
+	servingSize: function() {
+		return Session.get("serving_size");
 	}
 });
 
@@ -419,6 +420,10 @@ Template.recipes.events({
 	// 		}, 500);
 	// 	}
 	// }
+	'input div#serving-size > input': function(e, t) {
+		Session.set("serving_size", parseInt(e.currentTarget.value, 10));
+		// setNumIngredients();
+	}
 });
 
 Template.recipe_card.helpers({
@@ -627,9 +632,11 @@ Template.recipe_card.helpers({
 	numIngredientsNeeded: function(recipeName) {
 		var num = 0;
 		var recipeIngredients = recipes[recipeName];
+		var serving_size = Session.get("serving_size");
+		
 		for (var ingredient in recipeIngredients) {
 			ingredientName = ingredient["name"];
-			if (!(ingredient in ingredientsInPossession) || ingredientsInPossession[ingredient] < recipeIngredients[ingredient]["quantity"]) {
+			if (!(ingredient in ingredientsInPossession) || ingredientsInPossession[ingredient] < recipeIngredients[ingredient]["quantity"]*serving_size) {
 				num++;
 			}
 		}
@@ -671,6 +678,26 @@ Template.recipe_header.helpers({
 Template.list.helpers({
 	ingredients: function() {
 		return Session.get("newIngredients");
+	}
+});
+
+
+Template.category.events({
+	"click .collapseable": function(event) {
+		console.log($(event.currentTarget).find(".chevron_toggleable"));
+		$(event.currentTarget).find(".chevron_toggleable").toggleClass('ion-chevron-down ion-chevron-up');
+	}
+});
+
+Template.recipe_info.helpers({
+	inPossession: function(name, quantity) {
+		var serving_size = Session.get("serving_size");
+		if (name in ingredientsInPossession) {
+			if (ingredientsInPossession[name] >= quantity*serving_size) {
+				return true;
+			}
+		}
+		return false;
 	}
 });
 
