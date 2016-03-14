@@ -128,6 +128,7 @@ Session.set("serving_size", 1);
 Session.set("selected_index", 0);
 Session.set("num_selected", 0);
 Session.set("recipes_showing", recipesList);
+Session.set("recipes_selected", {});
 
 details_extracted_id = null;
 
@@ -268,6 +269,10 @@ Template.recipes.helpers({
 			var recipe_name = curr_card.find('div.recipe-name > span').text();
 			recipeSelected(recipe_name, ingredientsNeeded);
 			resetShoppingList();
+
+			var recipes_selected = Session.get("recipes_selected");
+			recipes_selected[recipe_name] = true;
+			Session.set('recipes_selected', recipes_selected);
 
 			if (next_card.length) {
 				var left_val = "-" + (next_card.position().left - (selected_recipe_card_width - recipe_card_width) - ((window_width - selected_recipe_card_width) / 2))
@@ -454,6 +459,10 @@ Template.recipe_card.helpers({
 			var recipe_name = curr_card.find('div.recipe-name > span').text();
 			recipeSelected(recipe_name, ingredientsNeeded);
 			resetShoppingList();
+
+			var recipes_selected = Session.get("recipes_selected");
+			recipes_selected[recipe_name] = true;
+			Session.set('recipes_selected', recipes_selected);
 
 			if (next_card.length) {
 				var left_val = "-" + (next_card.position().left - (selected_recipe_card_width - recipe_card_width) - ((window_width - selected_recipe_card_width) / 2))
@@ -661,6 +670,10 @@ Template.recipe_footer.helpers({
 			var recipe_name = curr_card.find('div.recipe-name > span').text();
 			recipeUnselected(recipe_name, ingredientsNeeded);
 			resetShoppingList();
+
+			var recipes_selected = Session.get("recipes_selected");
+			delete recipes_selected[recipe_name];
+			Session.set('recipes_selected', recipes_selected);
 		}
 	}
 
@@ -678,6 +691,19 @@ Template.recipe_header.helpers({
 Template.list.helpers({
 	ingredients: function() {
 		return Session.get("newIngredients");
+	}
+});
+
+Template.ingredient.events({
+	"click div.check": function(event) {
+		$(event.currentTarget).find("i").toggleClass('ion-android-checkbox-outline ion-android-checkbox-outline-blank');
+		var tbody = $(event.currentTarget).closest('table > tbody');
+		var this_tr = $(event.currentTarget).closest('tr').detach();
+		if ($(event.currentTarget).find("i").hasClass("ion-android-checkbox-outline-blank")) {
+			tbody.prepend(this_tr);
+		} else if ($(event.currentTarget).find("i").hasClass("ion-android-checkbox-outline")) {
+			tbody.append(this_tr);
+		}
 	}
 });
 
@@ -700,4 +726,35 @@ Template.recipe_info.helpers({
 		return false;
 	}
 });
+
+Template.selected_recipes.helpers({
+
+	selected_recipes_gestures: {
+		"tap .selected-recipe": function(e, t) {
+			// console.log($(e.target).closest('.selected-recipe'));
+			// var ind = ($(e.target).closest('.selected-recipe').attr('id')).split('-')[1];
+			// Session.set("selected_index", ind);
+			$(e.target).closest('.selected-recipe').addClass('tapped');
+		},
+
+		"tap .selected-recipe.tapped > .overlay": function(e, t) {
+			var modal = $(e.target).closest('.selected-recipe').next('.modal');
+			modal.filter('.modal').modal('toggle');
+			$(e.target).closest('.selected-recipe').removeClass('tapped');
+		}
+	},
+
+	selectedRecipes: function() {
+		var selected_recipes = Session.get("recipes_selected");
+		var selected_recipes_list = [];
+		for (var recipe in recipesList) {
+			if (recipesList[recipe]['name'] in selected_recipes) {
+				selected_recipes_list.push(recipesList[recipe])
+			}
+		}
+
+		return selected_recipes_list;
+	}
+});
+
 

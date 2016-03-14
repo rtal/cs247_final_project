@@ -1,6 +1,8 @@
 div#serving-size > input,
 div#serving-size > span {
-	background-color:#3e454c; color:#fff6e5; border-color:#fff6e5;
+	background-color:#3e454c; 
+	color:#fff6e5; 
+	border-color:#fff6e5;
 }
 
 .recipe-cards {
@@ -52,7 +54,7 @@ div#serving-size > span {
 }
 
 .recipe-card.details {
-	position: absolute;
+	position: fixed;
 	margin:0;
 	overflow: auto;
 	width: 100%;
@@ -185,6 +187,16 @@ div#serving-size > span {
 
 .recipe-card.thumbnail.tapped .overlay {
 	display: flex;
+}
+
+.selected-recipe > .overlay {
+	visibility: hidden;
+
+	transition: visibility 0.75s;
+}
+
+.selected-recipe.tapped > .overlay {
+	visibility: visible;
 }
 
 /*#recipe-footer > div {

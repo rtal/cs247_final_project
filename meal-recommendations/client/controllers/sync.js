@@ -1,4 +1,13 @@
 Template.sync.helpers({
+  sync_gestures: {
+    "tap .device div.sync": function (e, t) {
+      $(event.target).closest('.device div.sync').find('i').removeClass('ion-loop').addClass('ion-checkmark-round');
+    },
+
+    "tap #next": function (e, t) {
+      Router.go('/items');
+    }
+  },
 	devices: function() {
 		return new Array({id: "device1", name: "Pantry Camera", img: "/img/device1.jpg"}, 
 					     {id: "device2", name: "Refridgerator Camera", img: "/img/device2.jpg"}, 
@@ -7,10 +16,8 @@ Template.sync.helpers({
 });
 
 Template.sync.events({
-  "click .device button": function (event) {
-  	$(event.target).html('Synced');
-  	$(event.target).addClass('disabled');
-  	$('#next-container').removeClass('hidden');
+  "click .device div.sync": function (event) {
+    $(event.currentTarget).find('i').removeClass('ion-loop').addClass('ion-checkmark-round');
   },
 
   "click #next": function (event) {

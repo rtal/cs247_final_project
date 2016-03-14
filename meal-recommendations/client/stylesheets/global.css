@@ -388,9 +388,10 @@ table tr {
 	height: 75px;
 }*/
 
-table td:not(:first-child){
+/*table td:not(.img-td),
+table td:not(.checkbox-td){
     width: 100%;
-}
+}*/
 
 table td:first-child{
     white-space: nowrap;

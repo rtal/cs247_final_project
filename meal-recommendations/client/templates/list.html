@@ -14,13 +14,25 @@
 					{{/each}}
 				</tbody>
 			</table>
+			<div id="footer-space"></div>
+			<nav id="footer" class="no-margin navbar navbar-default navbar-fixed-bottom font-subsection text-align-center sm-padding">
+				<a href="/selectedRecipes" class="items-vert-center">
+					<span class="margin-auto">Let's Cook!</span>
+					<i class="ion-chevron-right margin-left-auto sm-margin-right font-heading"></i>
+				</a>
+			</nav>
 		</div>
 <!-- 	</div> -->
 </template>
 
 <template name="ingredient">
 	<tr class="ingredient">
-		<td>
+		<td class="vert-align-middle checkbox-td" style="cursor:pointer;">
+			<div class="check font-subsection">
+				<i class="ion-android-checkbox-outline-blank"></i>
+			</div>
+		</td>
+		<td class="vert-align-middle img-td">
 			<div class="img-container no-margin">
 				<img src="{{img}}" class="img-responsive img-thumbnail" alt="{{name}}" />
 			</div>

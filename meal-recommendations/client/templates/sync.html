@@ -1,4 +1,5 @@
 <template name="sync">
+	{{#HammerTouchArea gestureMap=sync_gestures}}
 	<div class="col-xs-12">
 		<h2 class="md-margin-bot text-align-center">Nearby Devices</h2>
 		<table class="table">
@@ -14,11 +15,13 @@
 			</tbody>
 		</table>
 
-		<div id="next-container" class="hidden">
-			<button type="button" id="next" class="pull-right btn btn-success">Next</button>
+		<div id="next" style="cursor:pointer;">
+			<span class="margin-auto font-xlg sm-padding pull-right" style="letter-spacing:1.25px;">Next
+				<i class="ion-chevron-right xsm-padding-left"></i>
+			</span>
 		</div>
 	</div>
-
+	{{/HammerTouchArea}}
 </template>
 
 <template name="device">
@@ -30,7 +33,12 @@
 		</td>
 		<td class="vert-align-middle font-md-bolder">{{name}}</td>
 		<td class="vert-align-middle">
-			<button type="button" class="pull-right btn btn-primary btn-md" style="border:none;">Sync</button>
+			<div class="sync" style="border:1px solid #fff6e5; border-radius:6px; background-color:rgba(209,225,235,0.15); height:37px; width:37px; position:relative; cursor:pointer;">
+				<span class="font-xlg items-vert-center" style="position:absolute; width:100%; height:100%; top:0; left:0;">
+					<i class="ion-loop margin-auto"></i>
+				</span>
+			</div>
+<!-- 			<button type="button" class="pull-right btn btn-primary btn-md" style="border:none;">Sync</button> -->
 		</td>
 	</tr>
 </template>

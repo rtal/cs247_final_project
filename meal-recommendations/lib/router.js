@@ -14,3 +14,7 @@ Router.route('/', function() {
 Router.route('/mealsList', function() {
 	this.render('meals_list');
 });
+
+Router.route('/selectedRecipes', function() {
+	this.render('selected_recipes');
+});

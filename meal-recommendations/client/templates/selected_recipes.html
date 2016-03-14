@@ -1,0 +1,43 @@
+<template name="selected_recipes">
+	{{#HammerTouchArea gestureMap=selected_recipes_gestures}}
+	<h2 class="md-margin-bot text-align-center">Your Recipes</h2>
+	<div class="md-margin-bot" style="width:100%; position:relative;">
+		{{#each selectedRecipes}}
+			<div class="selected-recipe" id="recipe-{{@index}}" style="width:50%; float:left; position:relative; cursor:pointer;">
+				<img src="{{img}}" alt="{{name}}" />
+				<div class="overlay text-align-center font-lg" style="position: absolute; width:100%; height:100%; background-color: rgba(62,69,76,0.75); top:0; letter-spacing:1.25px;">
+					<span class="margin-auto sm-padding" style="color: #fff6e5; position:absolute; top:0; left:0;">
+						{{name}}
+					</span>
+					<span class="margin-auto sm-padding" style="position:absolute; bottom:0; right:0;">Recipe
+						<i class="ion-chevron-right xsm-padding-left"></i>
+					</span>
+				</div>
+			</div>
+			<div id="{{id}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="{{id}}-label" style="background:none; box-shadow:none; border:none;">
+				<div class="modal-dialog" role="document" style="color:#3e454c; background:none;">
+					<div class="modal-content" style="background-color:#fff6e5;">
+						<div class="modal-header" style='background-image:url("{{img}}"); background-position:center; padding:150px 0 0 0; border-top-right-radius:6px; border-top-left-radius:6px; color:#fff6e5; background-repeat:no-repeat; background-size:cover;'>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="opacity:0.75; color:#3e454c; position:absolute; top:2px; right:10px; border-top-right-radius: 6px; border-bottom-left-radius: 6px;background-color:rgba(255,246,229,0.75); padding-left:12px; padding-right:12px;">
+								<span class="font-xlg" aria-hidden="true">
+									<i class="ion-close-round"></i>
+								</span></button>
+							<h3 class="modal-title md-padding-right" id="{{id}}-label" style="padding:7px 10px; text-align:center; background-color:rgba(62,69,76,0.75);">{{name}}</h3>
+						</div>
+						<div class="modal-body" style="max-height: 300px;">
+							{{ > recipe_info recipe=this}}
+						</div>
+					</div>
+				</div>
+			</div>
+		{{/each}}
+		<div id="get-more-recipes" style="width:50%; height:0px; padding-top:49.5%; float:left; position:relative; border:1px solid #fff6e5;">
+			<a href="/recipes">
+				<span class="items-vert-center" style="position:absolute; width:100%; height:100%; top:0; left:0;">
+					<i class="ion-ios-plus-empty margin-auto" style="font-size:100px;"></i>
+				</span>
+			</a>
+		</div>
+	</div>
+	{{/HammerTouchArea}}
+</template>

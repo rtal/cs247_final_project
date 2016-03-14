@@ -22,11 +22,11 @@
           "name": "Pasta Sauce",
           "quantity": 1,
           "unit": "bottle",
-          "img": "/img/pasta-sauce.jpg"
+          "img": "/img/pasta-sauce.jpeg"
         },
         {
           "name": "Lasagna",
-          "quantity": 2,
+          "quantity": 1,
           "unit": "servings",
           "img": "/img/lasagna.jpg"
         },
